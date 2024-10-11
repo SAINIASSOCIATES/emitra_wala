@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .form-group div {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .form-group div:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        flex-direction: column;
+      }
+
+      .form-group div {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="/ANNEXURE" method="POST">
+      <div class="form-group">
+          <div>
+              <label for="name">नाम:</label>
+              <input type="text" id="name" name="name" value=""  >
+          </div>
+          <div>
+              <label for="father">पिता:</label>
+              <input type="text" id="father" name="father" value=""  >
+          </div>
+          <div>
+              <label for="dob">जन्म तिथि:</label>
+              <input type="text" id="dob" name="dob" value=""  >
+          </div>
+          <div>
+              <label for="address">पता:</label>
+              <input type="text" id="address" name="address" value=""  >
+          </div>
+      </div>
+  
+      <div class="form-group">
+          <div>
+              <label for="ofaddress">कार्यालय पता:</label>
+              <input type="text" id="ofaddress" name="ofaddress" value=""  >
+          </div>
+          <div>
+              <label for="prvname">पिछला नाम:</label>
+              <input type="text" id="prvname" name="prvname" value=""  >
+          </div>
+          <div>
+              <label for="ofadrs">कार्यालय का पता:</label>
+              <input type="text" id="ofadrs" name="ofadrs" value=""  >
+          </div>
+          <div>
+              <label for="date">तारीख:</label>
+              <input type="text" id="date" name="date" value=""  >
+          </div>
+      </div>
+  
+      <div class="form-group">
+          <div>
+              <label for="place">स्थान:</label>
+              <input type="text" id="place" name="place" value=""  >
+          </div>
+          <div>
+              <label for="flname">पूरा नाम:</label>
+              <input type="text" id="flname" name="flname" value=""  >
+          </div>
+          <div>
+              <label for="design">पद:</label>
+              <input type="text" id="design" name="design" value=""  >
+          </div>
+          <div>
+              <label for="depart">विभाग:</label>
+              <input type="text" id="depart" name="depart" value=""  >
+          </div>
+      </div>
+  
+      <div class="form-group">
+          <div>
+              <label for="idc">पहचान:</label>
+              <input type="text" id="idc" name="idc" value=""  >
+          </div>
+          <div>
+              <label for="tlphne">टेलीफोन:</label>
+              <input type="text" id="tlphne" name="tlphne" value=""  >
+          </div>
+          <div>
+              <label for="mobile">मोबाइल:</label>
+              <input type="text" id="mobile" name="mobile" value=""  >
+          </div>
+      </div>
+  
+      <div>
+          <button type="submit">सबमिट करें</button>
+      </div>
+  </form>
+  
+  </div>
+</body>
+</html>

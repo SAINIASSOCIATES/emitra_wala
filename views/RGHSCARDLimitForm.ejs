@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .form-group div {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .form-group div:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        flex-direction: column;
+      }
+
+      .form-group div {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="/RGHSCARDLimitForm" method="POST">
+
+      <div class="form-group">
+        <div>
+          <label for="name">नाम:</label>
+          <input type="text" id="name" name="name" value="Ramu" required>
+        </div>
+        <div>
+          <label for="mobile">पता में मोबाइल नंबर:</label>
+          <input type="text" id="mobile" name="mobile" value="6748359871" required>
+        </div>
+        <div>
+          <label for="rghs">RGHS नंबर:</label>
+          <input type="text" id="rghs" name="rghs" value="6748359871546446" required>
+        </div>
+        <div>
+          <label for="bkpk">बीमार की प्रकृति:</label>
+          <input type="text" id="bkpk" name="bkpk" value="Jaise bhi h acha h" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="dctrName">डॉक्टर का नाम:</label>
+          <input type="text" id="dctrName" name="dctrName" value="Dr. Ram lal oberoi" required>
+        </div>
+        <div>
+          <label for="dctrpst">डॉक्टर का पद:</label>
+          <input type="text" id="dctrpst" name="dctrpst" value="Manager Assistant" required>
+        </div>
+        <div>
+          <label for="treatmentdat">इलाज की शुरुआत की तारीख:</label>
+          <input type="text" id="treatmentdat" name="treatmentdat" value="10/10/2010" required>
+        </div>
+        <div>
+          <label for="price1">कीमत 1:</label>
+          <input type="text" id="price1" name="price1" value="10,00,000" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="price2">कीमत 2:</label>
+          <input type="text" id="price2" name="price2" value="5,00,000" required>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit">सबमिट करें</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

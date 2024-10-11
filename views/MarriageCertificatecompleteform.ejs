@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 3rem;
+    }
+
+    .section-info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* Four columns */
+      gap: 20px;
+      /* Space between grid items */
+      margin-bottom: 20px;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .section-info div {
+      padding: 0.7rem;
+    }
+
+    .section-info div label {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .section-info div input[type="text"],
+    .section-info div select,
+    .section-info div input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 0.7rem;
+      border-radius: 0.4rem;
+      color: #fff;
+      background-color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .section-info {
+        grid-template-columns: 1fr;
+        /* Single column on small screens */
+        width: 100%;
+      }
+    }
+
+    .other-information {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* Four columns */
+      gap: 4rem;
+      /* Space between grid items */
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .info {
+      margin-right: 3rem;
+    }
+
+    .indo div {
+      margin-right: 10px;
+      margin-top: 1rem;
+      padding: 0.8rem;
+    }
+
+    .info div label {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .info select {
+      margin-top: 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .info div input[type="text"],
+    .info div select,
+    .info div input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form action="/MarriageCertificatecompleteform" method="POST">
+
+
+
+    <div class="male-section section-info">
+
+      <div class="top">
+        <label for="mjanaadhar">वर का जन्नाधर:</label>
+        <input type="number" id="mjanaadhar" name="mjanaadhar" placeholder="वर का जन्नाधर"><br><br>
+      </div>
+
+      <div class="top">
+        <label for="maadhar">वर का आधार नंबर:</label>
+        <input type="number" id="maadhar" name="maadhar" placeholder="वर का आधार नंबर"><br><br>
+      </div>
+
+      <div>
+        <label for="name">वर का नाम:</label>
+        <input type="text" id="mname" name="mname" placeholder="वर का नाम"><br><br>
+      </div>
+
+      <div>
+        <label for="name">वर की माता:</label>
+        <input type="text" id="mmother" name="mmother" placeholder="वर की माता" value="mata"><br><br>
+      </div>
+
+      <div>
+        <label for="name">वर के पिता:</label>
+        <input type="text" id="mfather" name="mfather" placeholder="वर के पिता" value="pita"><br><br>
+      </div>
+
+      <div>
+        <label for="name">वर के दादा का नाम:</label>
+        <input type="text" id="mgarndfather" name="mgarndfather" placeholder="वर के दादा का नाम" value="dada"><br><br>
+      </div>
+
+      <div>
+        <label for="name">वर का धर्म:</label>
+        <input type="text" id="mreligion" name="mreligion" placeholder="वर का धर्म"><br><br>
+      </div>
+
+      <div>
+        <label for="name">वर की जाति:</label>
+        <input type="text" id="mcaste" name="mcaste" placeholder="वर की जाति" value="jaati"><br><br>
+      </div>
+
+      <div>
+        <label for="mdob">वर की जन्मतिथि:</label>
+        <input type="date" id="mdob" name="mdob" placeholder="वर की जन्मतिथि"><br><br>
+      </div>
+
+      <div>
+        <label for="medu">वर की शिक्षा:</label>
+        <input type="number" id="medu" name="medu" placeholder="वर की शिक्षा :- 10, 11, 12"><br><br>
+      </div>
+
+      <div>
+        <label for="name">वर का पता:</label>
+        <input type="text" id="maddress" name="maddress" placeholder="वर का पता" value="pata"><br><br>
+      </div>
+
+      <div>
+        <label for="mage">वर की उम्र:</label>
+        <input type="number" id="mage" name="mage" placeholder="वर की उम्र"><br><br>
+      </div>
+
+      <div>
+        <label for="mstate">वर का राज्य:</label>
+        <select id="mstate" name="mstate">
+          <option value="">-- राज्य का चयन करें --</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="mdistrict">वर का जिला:</label>
+        <select id="mdistrict" name="mdistrict">
+          <option value="">-- जिले का चयन करें --</option>
+        </select>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="male-english-section section-info">
+
+      <div>
+        <label for="emname">Groom Name:</label>
+        <input type="text" id="emname" name="emname" placeholder="Men Name"><br><br>
+      </div>
+
+      <div>
+        <label for="emedu">Groom Education:</label>
+        <input type="text" id="emedu" name="emedu" placeholder="Men Education :- 10, 11, 12"><br><br>
+      </div>
+
+      <div>
+        <label for="emfather">Groom Father Name:</label>
+        <input type="text" id="emfather" name="emfather" placeholder="Men Father Name"><br><br>
+      </div>
+
+      <div>
+        <label for="emmother">Groom Mother Name:</label>
+        <input type="text" id="emmother" name="emmother" placeholder="Men Mother Name"><br><br>
+      </div>
+
+      <div>
+        <label for="emcaste">Groom Caste:</label>
+        <input type="text" id="emcaste" name="emcaste" placeholder="Men Caste"><br><br>
+      </div>
+
+      <div>
+        <label for="emdistrict">Groom District:</label>
+        <select id="emdistrict" name="emdistrict">
+          <option value="">-- Select District --</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="emaddress">Groom Address:</label>
+        <input type="text" id="emaddress" name="emaddress" placeholder="Men Address"><br><br>
+      </div>
+
+      <div>
+        <label for="mestate">Groom State:</label>
+        <select id="mestate" name="mestate">
+          <option value="">-- Select State --</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="mobilenumber">Mobile Number:</label>
+        <input type="text" id="mobilenumber" name="mobilenumber" placeholder="Mobile Number"><br><br>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="female-section section-info">
+
+      <div>
+        <label for="fjanaadhar">वधू का जन्नाधर:</label>
+        <input type="number" id="fjanaadhar" name="fjanaadhar" placeholder="वधू का जन्नाधर"><br><br>
+      </div>
+
+      <div>
+        <label for="faadhar">वधू का आधार नंबर:</label>
+        <input type="number" id="faadhar" name="faadhar" placeholder="वधू का आधार नंबर"><br><br>
+      </div>
+
+      <div>
+        <label for="ffather">वधू के पिता:</label>
+        <input type="text" id="ffather" name="ffather" placeholder="वधू के पिता" value="famaleFather"><br><br>
+      </div>
+
+
+      <div>
+        <label for="name">वधू के दादा का नाम:</label>
+        <input type="text" id="fgrandfather" name="fgrandfather" placeholder="वधू के दादा का नाम" value="famaleGrandFather"><br><br>
+      </div>
+
+      <div>
+        <label for="fmother">वधू की माता:</label>
+        <input type="text" id="fmother" name="fmother" placeholder="वधू की माता" value="Female Mother"><br><br>
+      </div>
+
+      <div>
+        <label for="faddress">वधू का पता:</label>
+        <input type="text" id="faddress" name="faddress" placeholder="वधू का पता" value="address"><br><br>
+      </div>
+
+      <div>
+        <label for="freligion">वधू का धर्म:</label>
+        <input type="text" id="freligion" name="freligion" placeholder="वधू का धर्म"><br><br>
+      </div>
+
+      <div>
+        <label for="fcaste">वधू का जाति:</label>
+        <input type="text" id="fcaste" name="fcaste" placeholder="वधू का जाति" value="Caste"><br><br>
+      </div>
+
+      <div>
+        <label for="fname">वधू का नाम:</label>
+        <input type="text" id="fname" name="fname" placeholder="वधू का नाम"><br><br>
+      </div>
+
+      <div>
+        <label for="fedu">वधू की शिक्षा:</label>
+        <input type="text" id="fedu" name="fedu" placeholder="वधू की शिक्षा :- 10, 11, 12"><br><br>
+      </div>
+
+      <div>
+        <label for="fage">वधू की उम्र:</label>
+        <input type="number" id="fage" name="fage" placeholder="वधू की उम्र"><br><br>
+      </div>
+
+      <div>
+        <label for="fdob">वधू की जन्मतिथि:</label>
+        <input type="date" id="fdob" name="fdob" placeholder="वधू की जन्मतिथि"><br><br>
+      </div>
+
+      <div>
+        <label for="festate">वधू का राज्य:</label>
+        <select id="festate" name="festate">
+          <option value="">-- राज्य का चयन करें --</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="fdistrict">वधू का जिला:</label>
+        <select id="fdistrict" name="fdistrict">
+          <option value="">-- जिले का चयन करें --</option>
+        </select>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="female-english-section section-info">
+
+      <div>
+        <label for="efname">Bride Name:</label>
+        <input type="text" id="efname" name="efname" placeholder="Women Name"><br><br>
+      </div>
+
+      <div>
+        <label for="efedu">Bride Education:</label>
+        <input type="text" id="efedu" name="efedu" placeholder="Women Education"><br><br>
+      </div>
+
+      <div>
+        <label for="effather">Bride Father Name:</label>
+        <input type="text" id="effather" name="effather" placeholder="Women Father Name"><br><br>
+      </div>
+
+      <div>
+        <label for="efmother">Bride Mother Name:</label>
+        <input type="text" id="efmother" name="efmother" placeholder="Women Mother Name"><br><br>
+      </div>
+
+      <div>
+        <label for="efdistrict">Bride District:</label>
+        <select id="efdistrict" name="efdistrict">
+          <option value="">-- Select District --</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="efcaste">Bride Caste:</label>
+        <input type="text" id="efcaste" name="efcaste" placeholder="Women Caste"><br><br>
+      </div>
+
+      <div>
+        <label for="efaddress">Bride Address:</label>
+        <input type="text" id="efaddress" name="efaddress" placeholder="Women Address"><br><br>
+      </div>
+
+      <div>
+        <label for="fstate">Bride State:</label>
+        <select id="fstate" name="fstate">
+          <option value="">-- Select State --</option>
+        </select>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="wedding-section section-info">
+      <div>
+        <label for="marriageplace">विवाह स्थल:</label>
+        <input type="text" id="marriageplace" name="marriageplace" placeholder="विवाह स्थल"><br><br>
+      </div>
+
+      <div>
+        <label for="marriagedate">विवाह की तारीख:</label>
+        <input type="date" id="marriagedate" name="marriagedate" placeholder="विवाह की तारीख"><br><br>
+      </div>
+
+      <div>
+        <label for="beforedate">विवाह के पहले की तारीख:</label>
+        <input type="date" id="beforedate" name="beforedate" placeholder="विवाह के पहले की तारीख"><br><br>
+      </div>
+    </div>
+
+    <div class="section-info">
+      <div>
+        <label for="male-check">वर के गवाह के लिए माता या पिता का चयन करें:</label>
+        <input type="checkbox" id="male-check" name="mvitness" placeholder="गवाह (वर)"><br><br>
+      </div>
+      <div id="male-select-for-vitness" style="display: none;">
+        <label for="male-select">गवाह चयन (वर):</label>
+        <select id="male-select" name="mvitness-select">
+          <option value="" disabled selected>Select</option>
+          <option value="mata">माता</option>
+          <option value="Pita">पिता</option>
+          <option value="other">अन्य</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="female-check">वधु के गवाह के लिए माता या पिता का चयन करें:</label>
+        <input type="checkbox" id="female-check" name="fvitness" placeholder="विवाह के पहले की तारीख"><br><br>
+      </div>
+
+      <div id="female-select-for-vitness" style="display: none;">
+        <label for="female-select">गवाह चयन (वधू):</label>
+        <select id="female-select" name="fvitness-select">
+          <option value="" disabled selected>Select</option>
+          <option value="mata">माता</option>
+          <option value="Pita">पिता</option>
+          <option value="other">अन्य</option>
+        </select>
+      </div>
+    </div>
+
+
+
+
+    <div class="male-conditional section-info" id="male-hidden" style="display: none;">
+      <div>
+        <label for="mgawah">वर का गवाह:</label>
+        <input type="text" id="mgawah" name="mgawah" placeholder="वर का गवाह"><br><br>
+      </div>
+
+      <div>
+        <label for="mgawahfather">वर के गवाह में पिता का नाम:</label>
+        <input type="text" id="mgawahfather" name="mgawahfather" placeholder="वर के गवाह में पिता का नाम"><br><br>
+      </div>
+
+      <div>
+        <label for="mgawahaddress">वर के गवाह का पता:</label>
+        <input type="text" id="mgawahaddress" name="mgawahaddress" placeholder="वर के गवाह का पता"><br><br>
+      </div>
+
+      <div>
+        <label for="mgawahcaste">वर के गवाह की जाति:</label>
+        <input type="text" id="mgawahcaste" name="mgawahcaste" placeholder="वर के गवाह की जाति"><br><br>
+      </div>
+    </div>
+
+
+
+    <div class="female-condition section-info" id="female-hidden" style="display: none;">
+      <div>
+        <label for="fgawah">वधू का गवाह:</label>
+        <input type="text" id="fgawah" name="fgawah" placeholder="वधू का गवाह"><br><br>
+      </div>
+
+      <div>
+        <label for="fgawahfather">वधू के गवाह में पिता का नाम:</label>
+        <input type="text" id="fgawahfather" name="fgawahfather" placeholder="वधू के गवाह में पिता का नाम"><br>
+      </div>
+
+
+      <div>
+        <label for="fgawahaddress">वधू के गवाह का पता:</label>
+        <input type="text" id="fgawahaddress" name="fgawahaddress" placeholder="वर के गवाह का पता"><br><br>
+      </div>
+
+
+      <div>
+        <label for="fgawahcaste">वधू के गवाह की जाति:</label>
+        <input type="text" id="fgawahcaste" name="fgawahcaste" placeholder="वधू के गवाह की जाति"><br><br>
+      </div>
+    </div>
+
+    <div class="pandit-section section-info">
+      <div>
+        <label for="pandit">पंडित का नाम:</label>
+        <input type="text" id="pandit" name="pandit" placeholder="पंडित का नाम"><br><br>
+      </div>
+
+      <div>
+        <label for="pfather">पंडित के पिता नाम:</label>
+        <input type="text" id="pfather" name="pfather" placeholder="पंडित के पिता नाम"><br><br>
+      </div>
+
+      <div>
+        <label for="paddress">पंडित का पता:</label>
+        <input type="text" id="paddress" name="paddress" placeholder="पंडित का पता"><br><br>
+      </div>
+
+      <div>
+        <label for="pcaste">पंडित की कास्ट:</label>
+        <input type="text" id="pcaste" name="pcaste" placeholder="पंडित की कास्ट"><br><br>
+      </div>
+
+      <div>
+        <label for="pstate">पंडित का राज्य:</label>
+        <select id="pstate" name="pstate">
+          <option value="">-- राज्य का चयन करें --</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="pdistrict">पंडित का जिला:</label>
+        <select id="pdistrict" name="pdistrict">
+          <option value="">-- जिले का चयन करें --</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="other-information">
+      <div class="hindi-section-other-information info">
+        <div>
+          <label for="citizen">नागरिक:</label>
+          <input type="text" id="citizen" name="citizen" placeholder="नागरिक"><br><br>
+        </div>
+
+        <div>
+          <label for="presentdate">वर्तमान तिथि:</label>
+          <input type="date" id="presentdate" name="presentdate" placeholder="वर्तमान तिथि"><br><br>
+        </div>
+
+        <div>
+          <label for="marrstate">विवाह राज्य:</label>
+          <select id="marrstate" name="marrstate">
+            <option value="">-- राज्य का चयन करें --</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="marrdistrict">विवाह जिला:</label>
+          <select id="marrdistrict" name="marrdistrict">
+            <option value="">-- जिले का चयन करें --</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="english-section-other-information info">
+        <div>
+          <label for="ecitizen">Citizen:</label>
+          <input type="text" id="ecitizen" name="ecitizen" placeholder="Citizen"><br><br>
+        </div>
+
+        <div>
+          <label for="emarriageplace">Marrige Place:</label>
+          <input type="text" id="emarriageplace" name="emarriageplace" placeholder="Marrige Place"><br><br>
+        </div>
+
+        <div>
+          <label for="emarrstate">Marrige State:</label>
+          <select id="emarrstate" name="emarrstate">
+            <option value="">-- Select State --</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="emarrdistrict">Marrige District:</label>
+          <select id="emarrdistrict" name="emarrdistrict">
+            <option value="">-- Select District --</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+
+    <button type="submit">Submit</button>
+  </form>
+
+
+
+  <script>
+    let hindiState = document.getElementById("mstate");
+    let hindiDistrict = document.getElementById("mdistrict");
+    let femaleState = document.getElementById("festate");
+    let femaleDistrict = document.getElementById("fdistrict");
+    let panditState = document.getElementById("pstate");
+    let panditDistrict = document.getElementById("pdistrict");
+    let menDistrict = document.getElementById("emdistrict");
+    let menState = document.getElementById("mestate");
+    let womenState = document.getElementById("fstate");
+    let womenDistrict = document.getElementById("efdistrict");
+    let weddingStateHindi = document.getElementById("marrstate");
+    let weddingDistrictHindi = document.getElementById("marrdistrict");
+    let weddingStateEnglish = document.getElementById("emarrstate");
+    let weddingDistrictEnglish = document.getElementById("emarrdistrict");
+    let listData;
+    let englishListData;
+
+    fetch("states-and-districts.json")
+      .then((res) => res.json())
+      .then((data) => {
+        englishListData = data.states;
+        data.states.forEach((state) => {
+          // Create new options for each dropdown
+          let menOption = document.createElement("option");
+          menOption.value = state.state;
+          menOption.innerHTML = state.state;
+          menState.appendChild(menOption);
+
+          let womenOption = document.createElement("option");
+          womenOption.value = state.state;
+          womenOption.innerHTML = state.state;
+          womenState.appendChild(womenOption);
+
+          let weddingOptionEnglish = document.createElement("option");
+          weddingOptionEnglish.value = state.state;
+          weddingOptionEnglish.innerHTML = state.state;
+          weddingStateEnglish.appendChild(weddingOptionEnglish);
+        });
+      });
+
+    fetch("state_in_Hindi.json")
+      .then((res) => res.json())
+      .then((data) => {
+        listData = data.states;
+        data.states.forEach((state) => {
+          // Create new options for each dropdown
+          let hindiOption = document.createElement("option");
+          hindiOption.value = state.state;
+          hindiOption.innerHTML = state.state;
+          hindiState.appendChild(hindiOption);
+
+          let femaleOption = document.createElement("option");
+          femaleOption.value = state.state;
+          femaleOption.innerHTML = state.state;
+          femaleState.appendChild(femaleOption);
+
+          let panditOption = document.createElement("option");
+          panditOption.value = state.state;
+          panditOption.innerHTML = state.state;
+          panditState.appendChild(panditOption);
+
+          let weddingOptionHindi = document.createElement("option");
+          weddingOptionHindi.value = state.state;
+          weddingOptionHindi.innerHTML = state.state;
+          weddingStateHindi.appendChild(weddingOptionHindi);
+        });
+      });
+
+    // Event listeners for Hindi dropdowns
+    hindiState.addEventListener("change", function (e) {
+      updateDistricts(hindiState, hindiDistrict, listData, "-- जिले का चयन करें --");
+    });
+
+    femaleState.addEventListener("change", function (e) {
+      updateDistricts(femaleState, femaleDistrict, listData, "-- जिले का चयन करें --");
+    });
+
+    panditState.addEventListener("change", function (e) {
+      updateDistricts(panditState, panditDistrict, listData, "-- जिले का चयन करें --");
+    });
+
+    weddingStateHindi.addEventListener("change", function (e) {
+      updateDistricts(weddingStateHindi, weddingDistrictHindi, listData, "-- जिले का चयन करें --");
+    });
+
+    // Event listeners for English dropdowns
+    menState.addEventListener("change", function (e) {
+      updateDistricts(menState, menDistrict, englishListData, "-- Select District --");
+    });
+
+    womenState.addEventListener("change", function (e) {
+      updateDistricts(womenState, womenDistrict, englishListData, "-- Select District --");
+    });
+
+    weddingStateEnglish.addEventListener("change", function (e) {
+      updateDistricts(weddingStateEnglish, weddingDistrictEnglish, englishListData, "-- Select District --");
+    });
+
+    // Helper function to update districts
+    function updateDistricts(stateElement, districtElement, listData, defaultOptionText) {
+      listData.find((ele) => {
+        if (ele.state === stateElement.value) {
+          districtElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
+          ele.districts.forEach((district) => {
+            let option = document.createElement("option");
+            option.value = district;
+            option.innerHTML = district;
+            districtElement.appendChild(option);
+          });
+        }
+      });
+    }
+
+
+
+
+
+    let maleCheck = document.querySelector("#male-check")
+    let femaleCheck = document.querySelector("#female-check")
+    let otherInfo = document.querySelector("#male-hidden");
+    let Vitness = document.querySelector("#male-select-for-vitness");
+    let femleOtherInfo = document.querySelector("#female-hidden");
+    let femaleVitness = document.querySelector("#female-select-for-vitness");
+
+    maleCheck.addEventListener("change", function () {
+
+      if (maleCheck.checked) {
+        Vitness.style.display = "";
+      } else {
+        Vitness.style.display = "none";
+      }
+
+
+
+    });
+    femaleCheck.addEventListener("change", function () {
+
+     
+      if (femaleCheck.checked) {
+        femaleVitness.style.display = "";
+      } else {
+        femaleVitness.style.display = "none";
+      }
+    });
+
+
+    let MalevitnessName = document.querySelector("#male-select");
+    MalevitnessName.addEventListener("change", function (e) {
+      // Function to set and disable fields
+      function setFields(name, father, caste, address, isDisabled) {
+        document.querySelector("#mgawah").value = name;
+        document.querySelector("#mgawah").disabled = isDisabled;
+
+        document.querySelector("#mgawahfather").value = father;
+        document.querySelector("#mgawahfather").disabled = isDisabled;
+
+        document.querySelector("#mgawahcaste").value = caste;
+        document.querySelector("#mgawahcaste").disabled = isDisabled;
+
+        document.querySelector("#mgawahaddress").value = address;
+        document.querySelector("#mgawahaddress").disabled = isDisabled;
+      }
+
+      // Fetch common field values
+      let fatherName = document.querySelector("#mfather").value;
+      let grandFatherName = document.querySelector("#mgarndfather").value;
+      let motherName = document.querySelector("#mmother").value;
+      let caste = document.querySelector("#mcaste").value;
+      let address = document.querySelector("#maddress").value;
+
+      // Handle different select options
+      if (e.target.value === "Pita") {
+        setFields(fatherName, grandFatherName, caste, address, true);
+      } else if (e.target.value === "mata") {
+        setFields(motherName, fatherName, caste, address, true);
+      } else if (e.target.value === "other") {
+        setFields("", "", "", "", false);
+      }
+
+      // Handle display of otherInfo based on maleCheck
+      if (maleCheck.checked) {
+        otherInfo.style.display = "";
+      } else {
+        otherInfo.style.display = "none";
+      }
+    });
+
+
+    let famaleSelect = document.querySelector("#female-select");
+
+    famaleSelect.addEventListener("change", function (e) {
+      // Function to set and disable fields
+
+      function setFields(name, father, caste, address, isDisabled) {
+        document.querySelector("#fgawah").value = name;
+        document.querySelector("#fgawah").disabled = isDisabled;
+
+        document.querySelector("#fgawahfather").value = father;
+        document.querySelector("#fgawahfather").disabled = isDisabled;
+
+        document.querySelector("#fgawahcaste").value = caste;
+        document.querySelector("#fgawahcaste").disabled = isDisabled;
+
+        document.querySelector("#fgawahaddress").value = address;
+        document.querySelector("#fgawahaddress").disabled = isDisabled;
+      }
+
+      let fatherName = document.querySelector("#ffather").value;
+      let grandFatherName = document.querySelector("#fgrandfather").value;
+      let motherName = document.querySelector("#fmother").value;
+      let caste = document.querySelector("#fcaste").value;
+      let address = document.querySelector("#faddress").value;
+
+      // Handle different select options
+      if (e.target.value === "Pita") {
+        setFields(fatherName, grandFatherName, caste, address, true);
+      } else if (e.target.value === "mata") {
+        setFields(motherName, fatherName, caste, address, true);
+      } else if (e.target.value === "other") {
+        setFields("", "", "", "", false);
+      }
+
+      // Handle display of otherInfo based on maleCheck
+      if (femaleCheck.checked) {
+        femleOtherInfo.style.display = "";
+      } else {
+        femleOtherInfo.style.display = "none";
+      }
+
+    });
+
+
+
+
+  </script>
+
+</body>
+
+</html>

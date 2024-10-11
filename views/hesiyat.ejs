@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill PDF Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Increased max-width to fit more fields */
+            margin: auto;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 150px; /* Minimum width for each field */
+            margin-right: 10px; /* Space between fields */
+        }
+
+        .form-group:last-child {
+            margin-right: 0; /* Remove margin from the last element */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%; /* Full width for input fields */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Includes padding in width */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: auto; /* Center the button */
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column; /* Stack fields on small screens */
+            }
+            .form-group {
+                margin-right: 0; /* Remove right margin on small screens */
+                margin-bottom: 10px; /* Space between stacked fields */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/hesiyat" method="POST">
+
+
+        <div>
+            <label for="Aadhar">Aadhar:</label>
+            <input type="text" id="Aadhar" name="Aadhar">
+        </div>
+        <br>
+        <div>
+            <label for="Bhamashah">Bhamashah:</label>
+            <input type="text" id="Bhamashah" name="Bhamashah">
+        </div>
+        <br>
+        <div>
+            <label for="ApplicantName">ApplicantName:</label>
+            <input type="text" id="ApplicantName" name="ApplicantName">
+        </div>
+        <br>
+        <div>
+            <label for="Father">Father:</label>
+            <input type="text" id="Father" name="Father">
+        </div>
+        <br>
+        <div>
+            <label for="PresentAddress">PresentAddress:</label>
+            <input type="text" id="PresentAddress" name="PresentAddress">
+        </div>
+        <br>
+        <div>
+            <label for="FixAddress">FixAddress:</label>
+            <input type="text" id="FixAddress" name="FixAddress">
+        </div>
+        <br>
+        <div>
+            <label for="Villagecity">Villagecity:</label>
+            <input type="text" id="Villagecity" name="Villagecity">
+        </div>
+        <br>
+        <div>
+            <label for="Tehsil">Tehsil:</label>
+            <input type="text" id="Tehsil" name="Tehsil">
+        </div>
+        <br>
+        <div>
+            <label for="District">District:</label>
+            <input type="text" id="District" name="District">
+        </div>
+        <br>
+        <div>
+            <label for="Dob">Dob:</label>
+            <input type="text" id="Dob" name="Dob">
+        </div>
+        <br>
+        <div>
+            <label for="DobAddress">DobAddress:</label>
+            <input type="text" id="DobAddress" name="DobAddress">
+        </div>
+        <br>
+        <div>
+            <label for="Age">Age:</label>
+            <input type="text" id="Age" name="Age">
+        </div>
+        <br>
+        <div>
+            <label for="GenterM">GenterM:</label>
+            <input type="text" id="GenterM" name="GenterM">
+        </div>
+        <br>
+        <div>
+            <label for="GenterF">GenterF:</label>
+            <input type="text" id="GenterF" name="GenterF">
+        </div>
+        <br>
+        <div>
+            <label for="Marriage">Marriage:</label>
+            <input type="text" id="Marriage" name="Marriage">
+        </div>
+        <br>
+        <div>
+            <label for="unMarriage">unMarriage:</label>
+            <input type="text" id="unMarriage" name="unMarriage">
+        </div>
+        <br>
+        <div>
+            <label for="Religes">Religes:</label>
+            <input type="text" id="Religes" name="Religes">
+        </div>
+        <br>
+        <div>
+            <label for="Cast">Cast:</label>
+            <input type="text" id="Cast" name="Cast">
+        </div>
+        <br>
+        <div>
+            <label for="SubCast">SubCast:</label>
+            <input type="text" id="SubCast" name="SubCast">
+        </div>
+        <br>
+        <div>
+            <label for="Yes">Yes:</label>
+            <input type="text" id="Yes" name="Yes">
+        </div>
+        <br>
+        <div>
+            <label for="No">No:</label>
+            <input type="text" id="No" name="No">
+        </div>
+        <br>
+        <div>
+            <label for="TaxYes">TaxYes:</label>
+            <input type="text" id="TaxYes" name="TaxYes">
+        </div>
+        <br>
+        <div>
+            <label for="TaxNo">TaxNo:</label>
+            <input type="text" id="TaxNo" name="TaxNo">
+        </div>
+        <br>
+        <div>
+            <label for="Mobileno">Mobileno:</label>
+            <input type="text" id="Mobileno" name="Mobileno">
+        </div>
+        <br>
+        <div>
+            <label for="Panno">Panno:</label>
+            <input type="text" id="Panno" name="Panno">
+        </div>
+        <br>
+        <div>
+            <label for="Tinno">Tinno:</label>
+            <input type="text" id="Tinno" name="Tinno">
+        </div>
+        <br>
+        <div>
+            <label for="Property1">Property1:</label>
+            <input type="text" id="Property1" name="Property1">
+        </div>
+        <br>
+        <div>
+            <label for="Address1">Address1:</label>
+            <input type="text" id="Address1" name="Address1">
+        </div>
+        <br>
+        <div>
+            <label for="Rate1">Rate1:</label>
+            <input type="text" id="Rate1" name="Rate1">
+        </div>
+        <br>
+        <div>
+            <label for="Property2">Property2:</label>
+            <input type="text" id="Property2" name="Property2">
+        </div>
+        <br>
+        <div>
+            <label for="Address2">Address2:</label>
+            <input type="text" id="Address2" name="Address2">
+        </div>
+        <br>
+        <div>
+            <label for="Rate2">Rate2:</label>
+            <input type="text" id="Rate2" name="Rate2">
+        </div>
+        <br>
+        <div>
+            <label for="Property3">Property3:</label>
+            <input type="text" id="Property3" name="Property3">
+        </div>
+        <br>
+        <div>
+            <label for="Address3">Address3:</label>
+            <input type="text" id="Address3" name="Address3">
+        </div>
+        <br>
+        <div>
+            <label for="Rate3">Rate3:</label>
+            <input type="text" id="Rate3" name="Rate3">
+        </div>
+        <br>
+        <div>
+            <label for="Property4">Property4:</label>
+            <input type="text" id="Property4" name="Property4">
+        </div>
+        <br>
+        <div>
+            <label for="Address4">Address4:</label>
+            <input type="text" id="Address4" name="Address4">
+        </div>
+        <br>
+        <div>
+            <label for="Rate4">Rate4:</label>
+            <input type="text" id="Rate4" name="Rate4">
+        </div>
+        <br>
+        <div>
+            <label for="Total">Total:</label>
+            <input type="text" id="Total" name="Total">
+        </div>
+        <br>
+        <div>
+            <label for="Reason">Reason:</label>
+            <input type="text" id="Reason" name="Reason">
+        </div>
+        <br>
+        <div>
+            <label for="Date">Date:</label>
+            <input type="text" id="Date" name="Date">
+        </div>
+        <br>
+        <div>
+            <label for="Address">Address:</label>
+            <input type="text" id="Address" name="Address">
+        </div>
+        
+
+
+        <div>
+            <label for="AvidanceFirst">AvidanceFirst:</label>
+            <input type="text" id="AvidanceFirst" name="AvidanceFirst">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceFather">AvidanceFather:</label>
+            <input type="text" id="AvidanceFather" name="AvidanceFather">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceAddress">AvidanceAddress:</label>
+            <input type="text" id="AvidanceAddress" name="AvidanceAddress">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceVibhag">AvidanceVibhag:</label>
+            <input type="text" id="AvidanceVibhag" name="AvidanceVibhag">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceOfice">AvidanceOfice:</label>
+            <input type="text" id="AvidanceOfice" name="AvidanceOfice">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceRikti">AvidanceRikti:</label>
+            <input type="text" id="AvidanceRikti" name="AvidanceRikti">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceMobile">AvidanceMobile:</label>
+            <input type="text" id="AvidanceMobile" name="AvidanceMobile">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceApplicant">AvidanceApplicant:</label>
+            <input type="text" id="AvidanceApplicant" name="AvidanceApplicant">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceApplicantFather">AvidanceApplicantFather:</label>
+            <input type="text" id="AvidanceApplicantFather" name="AvidanceApplicantFather">
+        </div>
+        <br>
+        <div>
+            <label for="AvidanceApplicantAddress">AvidanceApplicantAddress:</label>
+            <input type="text" id="AvidanceApplicantAddress" name="AvidanceApplicantAddress">
+        </div>
+        <br>
+        <div>
+            <label for="Hesiyat">Hesiyat:</label>
+            <input type="text" id="Hesiyat" name="Hesiyat">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidance">SAvidance:</label>
+            <input type="text" id="SAvidance" name="SAvidance">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceFather">SAvidanceFather:</label>
+            <input type="text" id="SAvidanceFather" name="SAvidanceFather">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceAddress">SAvidanceAddress:</label>
+            <input type="text" id="SAvidanceAddress" name="SAvidanceAddress">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceVibhag">SAvidanceVibhag:</label>
+            <input type="text" id="SAvidanceVibhag" name="SAvidanceVibhag">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceOffice">SAvidanceOffice:</label>
+            <input type="text" id="SAvidanceOffice" name="SAvidanceOffice">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceRikti">SAvidanceRikti:</label>
+            <input type="text" id="SAvidanceRikti" name="SAvidanceRikti">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceMobile">SAvidanceMobile:</label>
+            <input type="text" id="SAvidanceMobile" name="SAvidanceMobile">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceApplicant">SAvidanceApplicant:</label>
+            <input type="text" id="SAvidanceApplicant" name="SAvidanceApplicant">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceApplicantFather">SAvidanceApplicantFather:</label>
+            <input type="text" id="SAvidanceApplicantFather" name="SAvidanceApplicantFather">
+        </div>
+        <br>
+        <div>
+            <label for="SAvidanceApplicantAddress">SAvidanceApplicantAddress:</label>
+            <input type="text" id="SAvidanceApplicantAddress" name="SAvidanceApplicantAddress">
+        </div>
+        <br>
+        <div>
+            <label for="SHesiyat">SHesiyat:</label>
+            <input type="text" id="SHesiyat" name="SHesiyat">
+        </div>
+        
+
+
+        <div>
+            <label for="Promiser">Promiser:</label>
+            <input type="text" id="Promiser" name="Promiser">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserFather">PromiserFather:</label>
+            <input type="text" id="PromiserFather" name="PromiserFather">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserAddress">PromiserAddress:</label>
+            <input type="text" id="PromiserAddress" name="PromiserAddress">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserVillage">PromiserVillage:</label>
+            <input type="text" id="PromiserVillage" name="PromiserVillage">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserTehsil">PromiserTehsil:</label>
+            <input type="text" id="PromiserTehsil" name="PromiserTehsil">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserDistrict">PromiserDistrict:</label>
+            <input type="text" id="PromiserDistrict" name="PromiserDistrict">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserProperty">PromiserProperty:</label>
+            <input type="text" id="PromiserProperty" name="PromiserProperty">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserSqure">PromiserSqure:</label>
+            <input type="text" id="PromiserSqure" name="PromiserSqure">
+        </div>
+        <br>
+        <div>
+            <label for="PromiserHesiyat">PromiserHesiyat:</label>
+            <input type="text" id="PromiserHesiyat" name="PromiserHesiyat">
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 3rem;
+    }
+
+    .section-info {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allow wrapping of the flex items */
+      margin-bottom: 20px;
+      width: 100%;
+      /* Full width */
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .section-info div {
+      margin-right: 10px;
+      padding: 0.7rem;
+      flex-basis: 23%;
+      /* 4 fields in a row */
+      box-sizing: border-box;
+      /* Include padding in width calculation */
+    }
+
+    .section-info div label {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+      display: block;
+      /* Make labels block elements */
+    }
+
+    .section-info div input[type="text"] {
+      width: 100%;
+      /* Full width */
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      /* Include padding in width calculation */
+    }
+
+    button {
+      padding: 0.7rem;
+      border-radius: 0.4rem;
+      color: #fff;
+      background-color: #444;
+      margin-top: 10px;
+      /* Space above button */
+      flex-basis: 100%;
+      /* Full width for button */
+    }
+
+    @media (max-width: 800px) {
+      .section-info div {
+        flex-basis: 48%;
+        /* 2 fields in a row on smaller screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section-info div {
+        flex-basis: 100%;
+        /* Stacks all fields on smaller screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section-info">
+    <form action="/berojgariform" method="POST">
+      <div>
+        <label for="Applicant">Applicant:</label>
+        <input type="text" id="Applicant" name="Applicant"><br>
+      </div>
+      <div>
+        <label for="Father">Father:</label>
+        <input type="text" id="Father" name="Father"><br>
+      </div>
+      <div>
+        <label for="Address">Address:</label>
+        <input type="text" id="Address" name="Address"><br>
+      </div>
+      <div>
+        <label for="Village">Village:</label>
+        <input type="text" id="Village" name="Village"><br>
+      </div>
+      <div>
+        <label for="Tehsil">Tehsil:</label>
+        <input type="text" id="Tehsil" name="Tehsil"><br>
+      </div>
+      <div>
+        <label for="District">District:</label>
+        <input type="text" id="District" name="District"><br>
+      </div>
+      <div>
+        <label for="DOB">DOB:</label>
+        <input type="text" id="DOB" name="DOB"><br>
+      </div>
+      <div>
+        <label for="DobAddress">DobAddress:</label>
+        <input type="text" id="DobAddress" name="DobAddress"><br>
+      </div>
+      <div>
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age"><br>
+      </div>
+      <div>
+        <label for="Gender">Gender:</label>
+        <input type="text" id="Gender" name="Gender"><br>
+      </div>
+      <div>
+        <label for="Marrigestatus">Marrigestatus:</label>
+        <input type="text" id="Marrigestatus" name="Marrigestatus"><br>
+      </div>
+      <div>
+        <label for="Religs">Religs:</label>
+        <input type="text" id="Religs" name="Religs"><br>
+      </div>
+      <div>
+        <label for="Cast">Cast:</label>
+        <input type="text" id="Cast" name="Cast"><br>
+      </div>
+      <div>
+        <label for="SubCast">SubCast:</label>
+        <input type="text" id="SubCast" name="SubCast"><br>
+      </div>
+      <div>
+        <label for="Moolnivasi">Moolnivasi:</label>
+        <input type="text" id="Moolnivasi" name="Moolnivasi"><br>
+      </div>
+      <div>
+        <label for="Taxpay">Taxpay:</label>
+        <input type="text" id="Taxpay" name="Taxpay"><br>
+      </div>
+      <div>
+        <label for="Mobile">Mobile:</label>
+        <input type="text" id="Mobile" name="Mobile"><br>
+      </div>
+      <div>
+        <label for="PanNo">PanNo:</label>
+        <input type="text" id="PanNo" name="PanNo"><br>
+      </div>
+      <div>
+        <label for="TinNo">TinNo:</label>
+        <input type="text" id="TinNo" name="TinNo"><br>
+      </div>
+      <div>
+        <label for="Memberfirst">Memberfirst:</label>
+        <input type="text" id="Memberfirst" name="Memberfirst"><br>
+      </div>
+      <div>
+        <label for="Agefirst">Agefirst:</label>
+        <input type="text" id="Agefirst" name="Agefirst"><br>
+      </div>
+      <div>
+        <label for="Relationfirst">Relationfirst:</label>
+        <input type="text" id="Relationfirst" name="Relationfirst"><br>
+      </div>
+      <div>
+        <label for="Worktypefirst">Worktypefirst:</label>
+        <input type="text" id="Worktypefirst" name="Worktypefirst"><br>
+      </div>
+      <div>
+        <label for="Yearlyincomefirst">Yearlyincomefirst:</label>
+        <input type="text" id="Yearlyincomefirst" name="Yearlyincomefirst"><br>
+      </div>
+      <div>
+        <label for="Membersecond">Membersecond:</label>
+        <input type="text" id="Membersecond" name="Membersecond"><br>
+      </div>
+      <div>
+        <label for="Agesecond">Agesecond:</label>
+        <input type="text" id="Agesecond" name="Agesecond"><br>
+      </div>
+      <div>
+        <label for="Relationsecond">Relationsecond:</label>
+        <input type="text" id="Relationsecond" name="Relationsecond"><br>
+      </div>
+      <div>
+        <label for="Worktypesecond">Worktypesecond:</label>
+        <input type="text" id="Worktypesecond" name="Worktypesecond"><br>
+      </div>
+      <div>
+        <label for="Yearlyincomesecond">Yearlyincomesecond:</label>
+        <input type="text" id="Yearlyincomesecond" name="Yearlyincomesecond"><br>
+      </div>
+      <div>
+        <label for="Memberthird">Memberthird:</label>
+        <input type="text" id="Memberthird" name="Memberthird"><br>
+      </div>
+      <div>
+        <label for="Agethird">Agethird:</label>
+        <input type="text" id="Agethird" name="Agethird"><br>
+      </div>
+      <div>
+        <label for="Relationthird">Relationthird:</label>
+        <input type="text" id="Relationthird" name="Relationthird"><br>
+      </div>
+      <div>
+        <label for="Worktypethird">Worktypethird:</label>
+        <input type="text" id="Worktypethird" name="Worktypethird"><br>
+      </div>
+      <div>
+        <label for="Yearlyincomethird">Yearlyincomethird:</label>
+        <input type="text" id="Yearlyincomethird" name="Yearlyincomethird"><br>
+      </div>
+      <div>
+        <label for="Memberfour">Memberfour:</label>
+        <input type="text" id="Memberfour" name="Memberfour"><br>
+      </div>
+      <div>
+        <label for="Agefour">Agefour:</label>
+        <input type="text" id="Agefour" name="Agefour"><br>
+      </div>
+      <div>
+        <label for="Relationfour">Relationfour:</label>
+        <input type="text" id="Relationfour" name="Relationfour"><br>
+      </div>
+      <div>
+        <label for="Worktypefour">Worktypefour:</label>
+        <input type="text" id="Worktypefour" name="Worktypefour"><br>
+      </div>
+      <div>
+        <label for="Yearlyincomefour">Yearlyincomefour:</label>
+        <input type="text" id="Yearlyincomefour" name="Yearlyincomefour"><br>
+      </div>
+      <div>
+        <label for="Memberfive">Memberfive:</label>
+        <input type="text" id="Memberfive" name="Memberfive"><br>
+      </div>
+      <div>
+        <label for="Agefive">Agefive:</label>
+        <input type="text" id="Agefive" name="Agefive"><br>
+      </div>
+      
+      <div>
+        <label for="Worktypefive">Worktypefive:</label>
+        <input type="text" id="Worktypefive" name="Worktypefive"><br>
+      </div>
+      <div>
+        <label for="Yearlyincomefive">Yearlyincomefive:</label>
+        <input type="text" id="Yearlyincomefive" name="Yearlyincomefive"><br>
+      </div>
+
+      
+      <div>
+        <label for="Relationfive">Relationfive:</label>
+        <input type="text" id="Relationfive" name="Relationfive">
+      </div>
+      
+      <div>
+        <label for="Membersix">Membersix:</label>
+        <input type="text" id="Membersix" name="Membersix">
+      </div>
+      <div>
+        <label for="Agesix">Agesix:</label>
+        <input type="text" id="Agesix" name="Agesix">
+      </div>
+      <div>
+        <label for="Relationsix">Relationsix:</label>
+        <input type="text" id="Relationsix" name="Relationsix">
+      </div>
+      <div>
+        <label for="Worktypesix">Worktypesix:</label>
+        <input type="text" id="Worktypesix" name="Worktypesix">
+      </div>
+      <div>
+        <label for="Yearlyincomesix">Yearlyincomesix:</label>
+        <input type="text" id="Yearlyincomesix" name="Yearlyincomesix">
+      </div>
+      <div>
+        <label for="Otherincome">Otherincome:</label>
+        <input type="text" id="Otherincome" name="Otherincome">
+      </div>
+      <div>
+        <label for="TotalIncome">TotalIncome:</label>
+        <input type="text" id="TotalIncome" name="TotalIncome">
+      </div>
+      <div>
+        <label for="Date">Date:</label>
+        <input type="text" id="Date" name="Date">
+      </div>
+      <div>
+        <label for="AAddress">AAddress:</label>
+        <input type="text" id="AAddress" name="AAddress">
+      </div>
+      <div>
+        <label for="AvidanceFirst">AvidanceFirst:</label>
+        <input type="text" id="AvidanceFirst" name="AvidanceFirst">
+      </div>
+      <div>
+        <label for="Avidancefather">Avidancefather:</label>
+        <input type="text" id="Avidancefather" name="Avidancefather">
+      </div>
+      <div>
+        <label for="AvFirstAddress">AvFirstAddress:</label>
+        <input type="text" id="AvFirstAddress" name="AvFirstAddress">
+      </div>
+      <div>
+        <label for="Vibhagfirst">Vibhagfirst:</label>
+        <input type="text" id="Vibhagfirst" name="Vibhagfirst">
+      </div>
+      <div>
+        <label for="Rictifirst">Rictifirst:</label>
+        <input type="text" id="Rictifirst" name="Rictifirst">
+      </div>
+      <div>
+        <label for="KfApplicant">KfApplicant:</label>
+        <input type="text" id="KfApplicant" name="KfApplicant">
+      </div>
+      <div>
+        <label for="KfFather">KfFather:</label>
+        <input type="text" id="KfFather" name="KfFather">
+      </div>
+      <div>
+        <label for="KfAddress">KfAddress:</label>
+        <input type="text" id="KfAddress" name="KfAddress">
+      </div>
+      <div>
+        <label for="Kfyearlyincome">Kfyearlyincome:</label>
+        <input type="text" id="Kfyearlyincome" name="Kfyearlyincome">
+      </div>
+      <div>
+        <label for="AvidancesignName">AvidancesignName:</label>
+        <input type="text" id="AvidancesignName" name="AvidancesignName">
+      </div>
+      <div>
+        <label for="AvidancesignDate">AvidancesignDate:</label>
+        <input type="text" id="AvidancesignDate" name="AvidancesignDate">
+      </div>
+      <div>
+        <label for="AvidancesignAddress">AvidancesignAddress:</label>
+        <input type="text" id="AvidancesignAddress" name="AvidancesignAddress">
+      </div>
+      <div>
+        <label for="Avidancesecond">Avidancesecond:</label>
+        <input type="text" id="Avidancesecond" name="Avidancesecond">
+      </div>
+      <div>
+        <label for="Avidancesecondfather">Avidancesecondfather:</label>
+        <input type="text" id="Avidancesecondfather" name="Avidancesecondfather">
+      </div>
+      <div>
+        <label for="AsAddress">AsAddress:</label>
+        <input type="text" id="AsAddress" name="AsAddress">
+      </div>
+      <div>
+        <label for="AsvibhagName">AsvibhagName:</label>
+        <input type="text" id="AsvibhagName" name="AsvibhagName">
+      </div>
+      <div>
+        <label for="AsRikti">AsRikti:</label>
+        <input type="text" id="AsRikti" name="AsRikti">
+      </div>
+      <div>
+        <label for="AsApplicant">AsApplicant:</label>
+        <input type="text" id="AsApplicant" name="AsApplicant">
+      </div>
+      <div>
+        <label for="AsApplicantfather">AsApplicantfather:</label>
+        <input type="text" id="AsApplicantfather" name="AsApplicantfather">
+      </div>
+      <div>
+        <label for="AsApplicantAddress">AsApplicantAddress:</label>
+        <input type="text" id="AsApplicantAddress" name="AsApplicantAddress">
+      </div>
+      <div>
+        <label for="Asyearlyincome">Asyearlyincome:</label>
+        <input type="text" id="Asyearlyincome" name="Asyearlyincome">
+      </div>
+      <div>
+        <label for="AsavidancesignName">AsavidancesignName:</label>
+        <input type="text" id="AsavidancesignName" name="AsavidancesignName">
+      </div>
+      <div>
+        <label for="Asavidancedate">Asavidancedate:</label>
+        <input type="text" id="Asavidancedate" name="Asavidancedate">
+      </div>
+      <div>
+        <label for="Asavidanceaddress">Asavidanceaddress:</label>
+        <input type="text" id="Asavidanceaddress" name="Asavidanceaddress">
+      </div>
+      <div>
+        <label for="Annexurename">Annexurename:</label>
+        <input type="text" id="Annexurename" name="Annexurename">
+      </div>
+      <div>
+        <label for="Annexurefather">Annexurefather:</label>
+        <input type="text" id="Annexurefather" name="Annexurefather">
+      </div>
+      <div>
+        <label for="AnnexureDob">AnnexureDob:</label>
+        <input type="text" id="AnnexureDob" name="AnnexureDob">
+      </div>
+      <div>
+        <label for="AnnexureAddress">AnnexureAddress:</label>
+        <input type="text" id="AnnexureAddress" name="AnnexureAddress">
+      </div>
+      <div>
+        <label for="AnnexureDistrict">AnnexureDistrict:</label>
+        <input type="text" id="AnnexureDistrict" name="AnnexureDistrict">
+      </div>
+      <div>
+        <label for="ownpromise">ownpromise:</label>
+        <input type="text" id="ownpromise" name="ownpromise">
+      </div>
+      <div>
+        <label for="ownpromiseFather">ownpromiseFather:</label>
+        <input type="text" id="ownpromiseFather" name="ownpromiseFather">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    .section {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .elemets {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 20%; /* Four items per row */
+      padding: 1rem;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="number"] {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button{
+      width: 15%;
+      height: 15%;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <form action="/BonafiedCertificateForm" method="POST">
+      <div class="elemets">
+        <label for="name">नाम:</label>
+        <input type="text" id="name" name="name"  >
+      </div>
+
+      <div class="elemets">
+        <label for="father">पिता का नाम:</label>
+        <input type="text" id="father" name="father"  >
+      </div>
+
+      <div class="elemets">
+        <label for="mobile">मोबाइल:</label>
+        <input type="number" id="mobile" name="mobile"  >
+      </div>
+
+      <div class="elemets">
+        <label for="presentAddress">वर्तमान पता:</label>
+        <input type="text" id="presentAddress" name="presentAddress"  >
+      </div>
+
+      <div class="elemets">
+        <label for="premaAddress">स्थाई पता:</label>
+        <input type="text" id="premaAddress" name="premaAddress"  >
+      </div>
+
+    
+
+      <div class="elemets">
+        <label for="district">जिला:</label>
+        <input type="text" id="district" name="district"  >
+      </div>
+
+      <div class="elemets">
+        <label for="subdistrict">उप-जिला:</label>
+        <input type="text" id="subdistrict" name="subdistrict"  >
+      </div>
+
+      <div class="elemets">
+        <label for="gender">लिंग:</label>
+        <select type="text" id="gender" name="gender">
+          <option value="male">पुरुष</option>
+          <option value="female">महिला</option>
+          </select>
+      </div>
+
+      <div class="elemets">
+        <label for="fatherAndHusband">पिता या पति का नाम:</label>
+        <input type="text" id="fatherAndHusband" name="fatherAndHusband"  >
+      </div>
+
+      <div class="elemets">
+        <label for="fatherAndHusbandworking">पिता या पति का कार्य:</label>
+        <input type="text" id="fatherAndHusbandworking" name="fatherAndHusbandworking"  >
+      </div>
+
+      <div class="elemets">
+        <label for="fatherAndHusbandWorkingAddress">पिता या पति का कार्यस्थल:</label>
+        <input type="text" id="fatherAndHusbandWorkingAddress" name="fatherAndHusbandWorkingAddress"  >
+      </div>
+
+      <div class="elemets">
+        <label for="birthPlace">जन्म स्थान:</label>
+        <input type="text" id="birthPlace" name="birthPlace"  >
+      </div>
+
+      <div class="elemets">
+        <label for="dob">जन्म तिथि:</label>
+        <input type="date" id="dob" name="dob" onchange="calculateAge()" >
+      </div>
+
+      <div class="elemets" style="display: none;">
+        <label for="age">आयु:</label>
+        <input type="text" id="age" name="age" >
+      </div>
+
+      <div class="elemets">
+        <label for="manyYear">कितने वर्ष:</label>
+        <input type="text" id="manyYear" name="manyYear"  >
+      </div>
+
+      <div class="elemets">
+        <label for="AreYouMarind">क्या आप विवाहित हैं:</label>
+        <input type="text" id="AreYouMarind" name="AreYouMarind"  >
+      </div>
+
+      <div class="elemets">
+        <label for="dada">दादा का नाम:</label>
+        <input type="text" id="dada" name="dada"  >
+      </div>
+
+      <div>
+        <label for="MarridBox">Are you Marrid :</label>
+        <input type="checkbox" id="MarridBox" name="MarridBox"  >
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function calculateAge() {
+      const dobInput = document.getElementById('dob').value;
+      if (dobInput) {
+        const dob = new Date(dobInput);
+        const today = new Date();
+        let age = today.getFullYear() - dob.getFullYear();
+        const monthDiff = today.getMonth() - dob.getMonth();
+        
+        // Adjust age if the birthday hasn't occurred yet this year
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+          age--;
+        }
+        document.getElementById('age').value = age;
+        
+      } else {
+        document.getElementById('age').value = '';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .form-group div {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .form-group div:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        flex-direction: column;
+      }
+
+      .form-group div {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="/IncomeCertificate4PageFormat" method="POST">
+      <div class="form-group">
+        <div>
+          <label for="name">नाम:</label>
+          <input type="text" id="name" name="name" value="Ramu" required>
+        </div>
+        <div>
+          <label for="fathername">पिता का नाम:</label>
+          <input type="text" id="fathername" name="fathername" value="Vijay Kumar Sharma" required>
+        </div>
+        <div>
+          <label for="address">वर्तमान पता:</label>
+          <input type="text" id="address" name="address" value="Vijay Path shanti nagar petrol pump jaipur" required>
+        </div>
+        <div>
+          <label for="paddress">स्थायी पता:</label>
+          <input type="text" id="paddress" name="paddress" value="Raja Park" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="village">गाँव:</label>
+          <input type="text" id="village" name="village" value="gav" required>
+        </div>
+        <div>
+          <label for="district">जिला:</label>
+          <input type="text" id="district" name="district" value="district" required>
+        </div>
+        <div>
+          <label for="sdistrict">उप जिला:</label>
+          <input type="text" id="sdistrict" name="sdistrict" value="sdistrict" required>
+        </div>
+        <div>
+          <label for="dob">जन्म तिथि:</label>
+          <input type="text" id="dob" name="dob" value="01-01-2001" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="birthplace">जन्म स्थान:</label>
+          <input type="text" id="birthplace" name="birthplace" value="Jaipur" required>
+        </div>
+        <div>
+          <label for="age">उम्र:</label>
+          <input type="text" id="age" name="age" value="24" required>
+        </div>
+        <div>
+          <label for="gender">लिंग:</label>
+          <input type="text" id="gender" name="gender" value="M" required>
+        </div>
+        <div>
+          <label for="marrstatus">वैवाहिक स्थिति:</label>
+          <input type="text" id="marrstatus" name="marrstatus" value="M" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="caste">जाति:</label>
+          <input type="text" id="caste" name="caste" value="caste" required>
+        </div>
+        <div>
+          <label for="religion">धर्म:</label>
+          <input type="text" id="religion" name="religion" value="religion" required>
+        </div>
+        <div>
+          <label for="subcat">उप जाति:</label>
+          <input type="text" id="subcat" name="subcat" value="Mali" required>
+        </div>
+        <div>
+          <label for="rajres">राजस्थान निवास:</label>
+          <input type="text" id="rajres" name="rajres" value="Y" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="aaydaa">आयकरदाता:</label>
+          <input type="text" id="aaydaa" name="aaydaa" value="Y" required>
+        </div>
+        <div>
+          <label for="pancard">पैन कार्ड नंबर:</label>
+          <input type="text" id="pancard" name="pancard" value="PAYDB4932Q" required>
+        </div>
+        <div>
+          <label for="tinno">टीआईएन नंबर:</label>
+          <input type="text" id="tinno" name="tinno" value="PAYDB4932Q" required>
+        </div>
+        <div>
+          <label for="membername">सदस्य का नाम:</label>
+          <input type="text" id="membername" name="membername" value="Raju lal Yadav" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="memage">उम्र:</label>
+          <input type="text" id="memage" name="memage" value="25" required>
+        </div>
+        <div>
+          <label for="relwiown">मालिक से संबंध:</label>
+          <input type="text" id="relwiown" name="relwiown" value="Guardian" required>
+        </div>
+        <div>
+          <label for="aayvavv">आय या व्यवसाय:</label>
+          <input type="text" id="aayvavv" name="aayvavv" value="Pata nhi kuch" required>
+        </div>
+        <div>
+          <label for="income">आय:</label>
+          <input type="text" id="income" name="income" value="1500000" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <label for="date">तारीख:</label>
+          <input type="text" id="date" name="date" value="01-01-2001" required>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit">सबमिट करें</button>
+      </div>
+      
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 3rem;
+    }
+
+    .section-info {
+      display: flex;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #fff;
+
+    }
+
+    .section-info div {
+      margin-right: 10px;
+      padding: 0.7rem;
+    }
+
+    .section-info div label {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .section-info div input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    .section-info div select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .section-info div input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    button {
+      padding: 0.7rem;
+      border-radius: 0.4rem;
+      color: #fff;
+      background-color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .section-info {
+        width: 100%;
+      }
+    }
+
+    .other-information {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 70%;
+
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .info {
+      margin-right: 3rem;
+
+    }
+
+    .indo div {
+      margin-right: 10px;
+      margin-top: 1rem;
+      padding: 0.8rem;
+    }
+
+    .info div label {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .info div input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    .info div select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .info div input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/PalanhaarForm" method="POST">
+
+    
+    <label for="email">mother:</label>
+    <input type="text" id="email" name="mother"  ><br><br>
+    <label for="email">ffather:</label>
+    <input type="text" id="email" name="ffather"  ><br><br>
+    <label for="email">address:</label>
+    <input type="text" id="email" name="address"  ><br><br>
+    <label for="email">rollnumber1:</label>
+    <input type="text" id="email" name="rollnumber1"  ><br><br>
+    <label for="email">child1:</label>
+    <input type="text" id="email" name="child1"  ><br><br>
+    <label for="email">motherfather1:</label>
+    <input type="text" id="email" name="motherfather1"  ><br><br>
+    <label for="email">gender1:</label>
+    <input type="text" id="email" name="gender1"  ><br><br>
+    <label for="email">dob1:</label>
+    <input type="text" id="email" name="dob1"  ><br><br>
+    <label for="email">pcenter1:</label>
+    <input type="text" id="email" name="pcenter1"  ><br><br>
+    <label for="email">when1:</label>
+    <input type="text" id="email" name="when1"  ><br><br>
+    <label for="email">rollnumber2:</label>
+    <input type="text" id="email" name="rollnumber2"  ><br><br>
+    <label for="email">child2:</label>
+    <input type="text" id="email" name="child2"  ><br><br>
+    <label for="email">motherfather2:</label>
+    <input type="text" id="email" name="motherfather2"  ><br><br>
+    <label for="email">gender2:</label>
+    <input type="text" id="email" name="gender2"  ><br><br>
+    <label for="email">dob2:</label>
+    <input type="text" id="email" name="dob2"  ><br><br>
+    <label for="email">pcenter2:</label>
+    <input type="text" id="email" name="pcenter2"  ><br><br>
+    <label for="email">when2:</label>
+    <input type="text" id="email" name="when2"  ><br><br>
+    <label for="email">rollnumber3:</label>
+    <input type="text" id="email" name="rollnumber3"  ><br><br>
+    <label for="email">child3:</label>
+    <input type="text" id="email" name="child3"  ><br><br>
+    <label for="email">motherfather3:</label>
+    <input type="text" id="email" name="motherfather3"  ><br><br>
+    <label for="email">gender3:</label>
+    <input type="text" id="email" name="gender3"  ><br><br>
+    <label for="email">dob3:</label>
+    <input type="text" id="email" name="dob3"  ><br><br>
+    <label for="email">pcenter3:</label>
+    <input type="text" id="email" name="pcenter3"  ><br><br>
+    <label for="email">when3:</label>
+    <input type="text" id="email" name="when3"  ><br><br>
+    <label for="email">rollnumber4:</label>
+    <input type="text" id="email" name="rollnumber4"  ><br><br>
+    <label for="email">child4:</label>
+    <input type="text" id="email" name="child4"  ><br><br>
+    <label for="email">motherfather4:</label>
+    <input type="text" id="email" name="motherfather4"  ><br><br>
+    <label for="email">gender4:</label>
+    <input type="text" id="email" name="gender4"  ><br><br>
+    <label for="email">dob4:</label>
+    <input type="text" id="email" name="dob4"  ><br><br>
+    <label for="email">pcenter4:</label>
+    <input type="text" id="email" name="pcenter4"  ><br><br>
+    <label for="email">when4:</label>
+    <input type="text" id="email" name="when4"  ><br><br>
+    <label for="email">date1:</label>
+    <input type="text" id="email" name="date1"  ><br><br>
+    <label for="email">signaturename1:</label>
+    <input type="text" id="email" name="signaturename1"  ><br><br>
+    <label for="email">office1:</label>
+    <input type="text" id="email" name="office1"  ><br><br>
+    <label for="email">mobile1:</label>
+    <input type="text" id="email" name="mobile1"  ><br><br>
+    <label for="email">stamp1:</label>
+    <input type="text" id="email" name="stamp1"  ><br><br>
+
+
+    <label for="email">office2:</label>
+    <input type="text" id="email" name="office2"  ><br><br>
+    <label for="email">kramank:</label>
+    <input type="text" id="email" name="kramank"  ><br><br>
+    <label for="email">date2:</label>
+    <input type="text" id="email" name="date2"  ><br><br>
+    <label for="email">eduyear2:</label>
+    <input type="text" id="email" name="eduyear2"  ><br><br>
+    <label for="email">srollnumber1:</label>
+    <input type="text" id="email" name="srollnumber1"  ><br><br>
+    <label for="email">sstudent1:</label>
+    <input type="text" id="email" name="sstudent1"  ><br><br>
+    <label for="email">smotherfather1:</label>
+    <input type="text" id="email" name="smotherfather1"  ><br><br>
+    <label for="email">sgender1:</label>
+    <input type="text" id="email" name="sgender1"  ><br><br>
+    <label for="email">sdob1:</label>
+    <input type="text" id="email" name="sdob1"  ><br><br>
+    <label for="email">spresentclass1:</label>
+    <input type="text" id="email" name="spresentclass1"  ><br><br>
+    <label for="email">sregisterdate1:</label>
+    <input type="text" id="email" name="sregisterdate1"  ><br><br>
+    <label for="email">srollnumber2:</label>
+    <input type="text" id="email" name="srollnumber2"  ><br><br>
+    <label for="email">sstudent2:</label>
+    <input type="text" id="email" name="sstudent2"  ><br><br>
+    <label for="email">smotherfather2:</label>
+    <input type="text" id="email" name="smotherfather2"  ><br><br>
+    <label for="email">sgender2:</label>
+    <input type="text" id="email" name="sgender2"  ><br><br>
+    <label for="email">sdob2:</label>
+    <input type="text" id="email" name="sdob2"  ><br><br>
+    <label for="email">spresentclass2:</label>
+    <input type="text" id="email" name="spresentclass2"  ><br><br>
+    <label for="email">sregisterdate2:</label>
+    <input type="text" id="email" name="sregisterdate2"  ><br><br>
+    <label for="email">srollnumber3:</label>
+    <input type="text" id="email" name="srollnumber3"  ><br><br>
+    <label for="email">sstudent3:</label>
+    <input type="text" id="email" name="sstudent3"  ><br><br>
+    <label for="email">smotherfather3:</label>
+    <input type="text" id="email" name="smotherfather3"  ><br><br>
+    <label for="email">sgender3:</label>
+    <input type="text" id="email" name="sgender3"  ><br><br>
+    <label for="email">sdob3:</label>
+    <input type="text" id="email" name="sdob3"  ><br><br>
+    <label for="email">spresentclass3:</label>
+    <input type="text" id="email" name="spresentclass3"  ><br><br>
+    <label for="email">sregisterdate3:</label>
+    <input type="text" id="email" name="sregisterdate3"  ><br><br>
+    <label for="email">srollnumber4:</label>
+    <input type="text" id="email" name="srollnumber4"  ><br><br>
+    <label for="email">sstudent4:</label>
+    <input type="text" id="email" name="sstudent4"  ><br><br>
+    <label for="email">smotherfather4:</label>
+    <input type="text" id="email" name="smotherfather4"  ><br><br>
+    <label for="email">sgender4:</label>
+    <input type="text" id="email" name="sgender4"  ><br><br>
+    <label for="email">sdob4:</label>
+    <input type="text" id="email" name="sdob4"  ><br><br>
+    <label for="email">spresentclass4:</label>
+    <input type="text" id="email" name="spresentclass4"  ><br><br>
+    <label for="email">sregisterdate4:</label>
+    <input type="text" id="email" name="sregisterdate4"  ><br><br>
+    <label for="email">sapprover2:</label>
+    <input type="text" id="email" name="approver2"  ><br><br>
+    <label for="email">schooladdress2:</label>
+    <input type="text" id="email" name="schooladdress2"  ><br><br>
+    <label for="email">mobile2:</label>
+    <input type="text" id="email" name="mobile2"  ><br><br>
+    <label for="email">seal2:</label>
+    <input type="text" id="email" name="seal2"  ><br><br>
+   
+
+
+
+    <label for="email">angancenter:</label>
+    <input type="text" id="email" name="angancenter"  ><br><br>
+    <label for="email">kramank2:</label>
+    <input type="text" id="email" name="kramank2"  ><br><br>
+    <label for="email">date3:</label>
+    <input type="text" id="email" name="date3"  ><br><br>
+    <label for="email">anganyear:</label>
+    <input type="text" id="email" name="anganyear"  ><br><br>
+    <label for="email">anganrollnumber1:</label>
+    <input type="text" id="email" name="anganrollnumber1"  ><br><br>
+    <label for="email">anganchild1:</label>
+    <input type="text" id="email" name="anganchild1"  ><br><br>
+    <label for="email">anganmotherfather1:</label>
+    <input type="text" id="email" name="anganmotherfather1"  ><br><br>
+    <label for="email">angangender1:</label>
+    <input type="text" id="email" name="angangender1"  ><br><br>
+    <label for="email">angandob1:</label>
+    <input type="text" id="email" name="angandob1"  ><br><br>
+    <label for="email">anganregisterdate1:</label>
+    <input type="text" id="email" name="anganregisterdate1"  ><br><br>
+    <label for="email">anganrollnumber2:</label>
+    <input type="text" id="email" name="anganrollnumber2"  ><br><br>
+    <label for="email">anganchild2:</label>
+    <input type="text" id="email" name="anganchild2"  ><br><br>
+    <label for="email">anganmotherfather2:</label>
+    <input type="text" id="email" name="anganmotherfather2"  ><br><br>
+    <label for="email">angangender2:</label>
+    <input type="text" id="email" name="angangender2"  ><br><br>
+    <label for="email">angandob2:</label>
+    <input type="text" id="email" name="angandob2"  ><br><br>
+    <label for="email">anganregisterdate2:</label>
+    <input type="text" id="email" name="anganregisterdate2"  ><br><br>
+    <label for="email">anganrollnumber3:</label>
+    <input type="text" id="email" name="anganrollnumber3"  ><br><br>
+    <label for="email">anganchild3:</label>
+    <input type="text" id="email" name="anganchild3"  ><br><br>
+    <label for="email">anganmotherfather3:</label>
+    <input type="text" id="email" name="anganmotherfather3"  ><br><br>
+    <label for="email">angangender3:</label>
+    <input type="text" id="email" name="angangender3"  ><br><br>
+    <label for="email">angandob3:</label>
+    <input type="text" id="email" name="angandob3"  ><br><br>
+    <label for="email">anganregisterdate3:</label>
+    <input type="text" id="email" name="anganregisterdate3"  ><br><br>
+    <label for="email">anganrollnumber4:</label>
+    <input type="text" id="email" name="anganrollnumber4"  ><br><br>
+    <label for="email">anganchild4:</label>
+    <input type="text" id="email" name="anganchild4"  ><br><br>
+    <label for="email">anganmotherfather4:</label>
+    <input type="text" id="email" name="anganmotherfather4"  ><br><br>
+    <label for="email">angangender4:</label>
+    <input type="text" id="email" name="angangender4"  ><br><br>
+    <label for="email">angandob4:</label>
+    <input type="text" id="email" name="angandob4"  ><br><br>
+    <label for="email">anganregisterdate4:</label>
+    <input type="text" id="email" name="anganregisterdate4"  ><br><br>
+    <label for="email">anganapprover:</label>
+    <input type="text" id="email" name="anganapprover"  ><br><br>
+    <label for="email">angancenter3:</label>
+    <input type="text" id="email" name="angancenter3"  ><br><br>
+    <label for="email">anganmobile3:</label>
+    <input type="text" id="email" name="anganmobile3"  ><br><br>
+    <label for="email">anganseal3:</label>
+    <input type="text" id="email" name="anganseal3"  ><br><br>
+    <label for="email">citypalankramank:</label>
+    <input type="text" id="email" name="citypalankramank"  ><br><br>
+    <label for="email">citypalandate:</label>
+    <input type="text" id="email" name="citypalandate"  ><br><br>
+    <label for="email">orderkramank:</label>
+    <input type="text" id="email" name="orderkramank"  ><br><br>
+    <label for="email">orderdate:</label>
+    <input type="text" id="email" name="orderdate"  ><br><br>
+    <label for="email">misses:</label>
+    <input type="text" id="email" name="misses"  ><br><br>
+    <label for="email">tfather:</label>
+    <input type="text" id="email" name="tfather"  ><br><br>
+    <label for="email">taddress:</label>
+    <input type="text" id="email" name="taddress"  ><br><br>
+    <label for="email">nhusband:</label>
+    <input type="text" id="email" name="nhusband"  ><br><br>
+    <label for="email">ctkramank1:</label>
+    <input type="text" id="email" name="ctkramank1"  ><br><br>
+    <label for="email">tchild1:</label>
+    <input type="text" id="email" name="tchild1"  ><br><br>
+    <label for="email">tgender1:</label>
+    <input type="text" id="email" name="tgender1"  ><br><br>
+    <label for="email">tdob1:</label>
+    <input type="text" id="email" name="tdob1"  ><br><br>
+    <label for="email">ctkramank2:</label>
+    <input type="text" id="email" name="ctkramank2"  ><br><br>
+    <label for="email">tchild2:</label>
+    <input type="text" id="email" name="tchild2"  ><br><br>
+    <label for="email">tgender2:</label>
+    <input type="text" id="email" name="tgender2"  ><br><br>
+    <label for="email">tdob2:</label>
+    <input type="text" id="email" name="tdob2"  ><br><br>
+    <label for="email">ctkramank3:</label>
+    <input type="text" id="email" name="ctkramank3"  ><br><br>
+    <label for="email">tchild3:</label>
+    <input type="text" id="email" name="tchild3"  ><br><br>
+    <label for="email">tgender3:</label>
+    <input type="text" id="email" name="tgender3"  ><br><br>
+    <label for="email">tdob3:</label>
+    <input type="text" id="email" name="tdob3"  ><br><br>
+    <label for="email">ttodaydate3:</label>
+    <input type="text" id="email" name="ttodaydate3"  ><br><br>
+    <label for="email">tapprover3:</label>
+    <input type="text" id="email" name="tapprover3"  ><br><br>
+    <label for="email">tseal3:</label>
+    <input type="text" id="email" name="tseal3"  ><br><br>
+    <label for="email">tapprover32:</label>
+    <input type="text" id="email" name="tapprover32"  ><br><br>
+    <label for="email">tseal32:</label>
+    <input type="text" id="email" name="tseal32"  ><br><br>
+    <label for="email">tapprover333:</label>
+    <input type="text" id="email" name="tapprover333"  ><br><br>
+    <label for="email">tofficename:</label>
+    <input type="text" id="email" name="tofficename"  ><br><br>
+    <label for="email">toffickramank:</label>
+    <input type="text" id="email" name="toffickramank"  ><br><br>
+    <label for="email">tofficdate:</label>
+    <input type="text" id="email" name="tofficdate"  ><br><br>
+    <label for="email">tofficorderdate:</label>
+    <input type="text" id="email" name="tofficorderdate"  ><br><br>
+    <label for="email">tofficjaridate:</label>
+    <input type="text" id="email" name="tofficjaridate"  ><br><br>
+    <label for="email">tofficmother:</label>
+    <input type="text" id="email" name="tofficmother"  ><br><br>
+    <label for="email">tofficfather:</label>
+    <input type="text" id="email" name="tofficfather"  ><br><br>
+    <label for="email">tofficaddress:</label>
+    <input type="text" id="email" name="tofficaddress"  ><br><br>
+    <label for="email">toffichusband:</label>
+    <input type="text" id="email" name="toffichusband"  ><br><br>
+    <label for="email">tkramankfirst:</label>
+    <input type="text" id="email" name="tkramankfirst"  ><br><br>
+    <label for="email">tchildfirst:</label>
+    <input type="text" id="email" name="tchildfirst"  ><br><br>
+    <label for="email">tgenderfirst:</label>
+    <input type="text" id="email" name="tgenderfirst"  ><br><br>
+    <label for="email">tdobfirst:</label>
+    <input type="text" id="email" name="tdobfirst"  ><br><br>
+    <label for="email">tkramanksecond:</label>
+    <input type="text" id="email" name="tkramanksecond"  ><br><br>
+    <label for="email">tchildsecond:</label>
+    <input type="text" id="email" name="tchildsecond"  ><br><br>
+    <label for="email">tgendersecond:</label>
+    <input type="text" id="email" name="tgendersecond"  ><br><br>
+    <label for="email">tdobsecond:</label>
+    <input type="text" id="email" name="tdobsecond"  ><br><br>
+    <label for="email">tkramankthird:</label>
+    <input type="text" id="email" name="tkramankthird"  ><br><br>
+    <label for="email">tchildthird:</label>
+    <input type="text" id="email" name="tchildthird"  ><br><br>
+    <label for="email">tgenderthird:</label>
+    <input type="text" id="email" name="tgenderthird"  ><br><br>
+    <label for="email">tdobthird:</label>
+    <input type="text" id="email" name="tdobthird"  ><br><br>
+    <label for="email">ttodaydate:</label>
+    <input type="text" id="email" name="ttodaydate"  ><br><br>
+    <label for="email">tapprovername:</label>
+    <input type="text" id="email" name="tapprovername"  ><br><br>
+    <label for="email">tapproverseal:</label>
+    <input type="text" id="email" name="tapproverseal"  ><br><br>
+    <label for="email">ckramank:</label>
+    <input type="text" id="email" name="ckramank"  ><br><br>
+    <label for="email">cdate:</label>
+    <input type="text" id="email" name="cdate"  ><br><br>
+    <label for="email">cordercramank:</label>
+    <input type="text" id="email" name="cordercramank"  ><br><br>
+    <label for="email">corderdate:</label>
+    <input type="text" id="email" name="corderdate"  ><br><br>
+    <label for="email">cmesses:</label>
+    <input type="text" id="email" name="cmesses"  ><br><br>
+    <label for="email">cfather:</label>
+    <input type="text" id="email" name="cfather"  ><br><br>
+    <label for="email">caddress:</label>
+    <input type="text" id="email" name="caddress"  ><br><br>
+    <label for="email">chusband:</label>
+    <input type="text" id="email" name="chusband"  ><br><br>
+    <label for="email">ckramankfirst:</label>
+    <input type="text" id="email" name="ckramankfirst"  ><br><br>
+    <label for="email">cchildfirst:</label>
+    <input type="text" id="email" name="cchildfirst"  ><br><br>
+    <label for="email">cgenderfirst:</label>
+    <input type="text" id="email" name="cgenderfirst"  ><br><br>
+    <label for="email">cdobfirst:</label>
+    <input type="text" id="email" name="cdobfirst"  ><br><br>
+    <label for="email">ckramanksecond:</label>
+    <input type="text" id="email" name="ckramanksecond"  ><br><br>
+    <label for="email">cchildsecond:</label>
+    <input type="text" id="email" name="cchildsecond"  ><br><br>
+    <label for="email">cgendersecond:</label>
+    <input type="text" id="email" name="cgendersecond"  ><br><br>
+    <label for="email">cdobsecond:</label>
+    <input type="text" id="email" name="cdobsecond"  ><br><br>
+    <label for="email">ckramankthird:</label>
+    <input type="text" id="email" name="ckramankthird"  ><br><br>
+    <label for="email">cchildthird:</label>
+    <input type="text" id="email" name="cchildthird"  ><br><br>
+    <label for="email">cgenderthird:</label>
+    <input type="text" id="email" name="cgenderthird"  ><br><br>
+    <label for="email">cdobthird:</label>
+    <input type="text" id="email" name="cdobthird"  ><br><br>
+    <label for="email">ctodaydate:</label>
+    <input type="text" id="email" name="ctodaydate"  ><br><br>
+    <label for="email">capproverfirst:</label>
+    <input type="text" id="email" name="capproverfirst"  ><br><br>
+    <label for="email">csealfirst:</label>
+    <input type="text" id="email" name="csealfirst"  ><br><br>
+    <label for="email">capproversecond:</label>
+    <input type="text" id="email" name="capproversecond"  ><br><br>
+    <label for="email">csealsecond:</label>
+    <input type="text" id="email" name="csealsecond"  ><br><br>
+    <label for="email">coffice:</label>
+    <input type="text" id="email" name="coffice"  ><br><br>
+    <label for="email">cofficekramank:</label>
+    <input type="text" id="email" name="cofficekramank"  ><br><br>
+    <label for="email">cofficedate:</label>
+    <input type="text" id="email" name="cofficedate"  ><br><br>
+    <label for="email">cofficordernote:</label>
+    <input type="text" id="email" name="cofficordernote"  ><br><br>
+    <label for="email">cofficorderdate:</label>
+    <input type="text" id="email" name="cofficorderdate"  ><br><br>
+    <label for="email">cofficordermother:</label>
+    <input type="text" id="email" name="cofficordermother"  ><br><br>
+    <label for="email">cofficorderhusband:</label>
+    <input type="text" id="email" name="cofficorderhusband"  ><br><br>
+    <label for="email">corderaddress:</label>
+    <input type="text" id="email" name="corderaddress"  ><br><br>
+    <label for="email">cfirsthusband:</label>
+    <input type="text" id="email" name="cfirsthusband"  ><br><br>
+    <label for="email">cbkramankfirst:</label>
+    <input type="text" id="email" name="cbkramankfirst"  ><br><br>
+    <label for="email">cbchildfirst:</label>
+    <input type="text" id="email" name="cbchildfirst"  ><br><br>
+    <label for="email">cbgenderfirst:</label>
+    <input type="text" id="email" name="cbgenderfirst"  ><br><br>
+    <label for="email">cbdobfirst:</label>
+    <input type="text" id="email" name="cbdobfirst"  ><br><br>
+    <label for="email">cbkramanksecond:</label>
+    <input type="text" id="email" name="cbkramanksecond"  ><br><br>
+    <label for="email">cbchildsecond:</label>
+    <input type="text" id="email" name="cbchildsecond"  ><br><br>
+    <label for="email">cbgendersecond:</label>
+    <input type="text" id="email" name="cbgendersecond"  ><br><br>
+    <label for="email">cbdobsecond:</label>
+    <input type="text" id="email" name="cbdobsecond"  ><br><br>
+    <label for="email">cbkramankthird:</label>
+    <input type="text" id="email" name="cbkramankthird"  ><br><br>
+    <label for="email">cbchildthird:</label>
+    <input type="text" id="email" name="cbchildthird"  ><br><br>
+    <label for="email">cbgenderthird:</label>
+    <input type="text" id="email" name="cbgenderthird"  ><br><br>
+    <label for="email">cbdobthird:</label>
+    <input type="text" id="email" name="cbdobthird"  ><br><br>
+    <label for="email">cbtodaydate:</label>
+    <input type="text" id="email" name="cbtodaydate"  ><br><br>
+    <label for="email">cbapprover:</label>
+    <input type="text" id="email" name="cbapprover"  ><br><br>
+    <label for="email">cbapproverseal:</label>
+    <input type="text" id="email" name="cbapproverseal"  ><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+
+
+  
+
+</body>
+
+</html>

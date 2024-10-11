@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+form div {
+  flex: 1 1 23%; /* 23% width for 4 fields per row with some margin */
+  margin: 10px 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <form action="/ewsnewform" method="POST">
+      
+      <div>
+        <label for="email">Shreeman:</label>
+        <input type="text" id="email" name="Shreeman">
+      </div><br>
+  
+      <div>
+        <label for="email">Income Office:</label>
+        <input type="text" id="email" name="incomeoffice">
+      </div><br>
+  
+      <div>
+        <label for="email">Office Address:</label>
+        <input type="text" id="email" name="OfficeAddress">
+      </div><br>
+  
+      <div>
+        <label for="email">Adharno:</label>
+        <input type="text" id="email" name="Adharno">
+      </div><br>
+  
+      <div>
+        <label for="email">Applicant Hindi:</label>
+        <input type="text" id="email" name="Applicanthindi">
+      </div><br>
+  
+      <div>
+        <label for="email">Applicant English:</label>
+        <input type="text" id="email" name="Applicantenglish">
+      </div><br>
+  
+      <div>
+        <label for="email">DOB:</label>
+        <input type="text" id="email" name="Dob">
+      </div><br>
+  
+      <div>
+        <label for="email">DOB Address:</label>
+        <input type="text" id="email" name="DobAddress">
+      </div><br>
+  
+      <div>
+        <label for="email">Age:</label>
+        <input type="text" id="email" name="Age">
+      </div><br>
+  
+      <div>
+        <label for="email">Address Info:</label>
+        <input type="text" id="email" name="Addressinfo">
+      </div><br>
+  
+      <div>
+        <label for="email">Present Address:</label>
+        <input type="text" id="email" name="PresentAddress">
+      </div><br>
+  
+      <div>
+        <label for="email">Fix Address:</label>
+        <input type="text" id="email" name="FixAddress">
+      </div><br>
+  
+      <div>
+        <label for="email">Phone No:</label>
+        <input type="text" id="email" name="Phoneno">
+      </div><br>
+  
+      <div>
+        <label for="email">Mobile No:</label>
+        <input type="text" id="email" name="Mobileno">
+      </div><br>
+  
+      <div>
+        <label for="email">Religion:</label>
+        <input type="text" id="email" name="Relign">
+      </div><br>
+  
+      <div>
+        <label for="email">Cast:</label>
+        <input type="text" id="email" name="Cast">
+      </div><br>
+  
+      <div>
+        <label for="email">Sub-Cast:</label>
+        <input type="text" id="email" name="SubCast">
+      </div><br>
+  
+      <div>
+        <label for="email">Additional Cast:</label>
+        <input type="text" id="email" name="AddCast">
+      </div><br>
+  
+      <div>
+        <label for="email">Gender:</label>
+        <input type="text" id="email" name="Gender">
+      </div><br>
+  
+      <div>
+        <label for="email">Marriage Status:</label>
+        <input type="text" id="email" name="Marrigestatus">
+      </div><br>
+  
+      <div>
+        <label for="email">Father (Hindi):</label>
+        <input type="text" id="email" name="Fatherhindi">
+      </div><br>
+  
+      <div>
+        <label for="email">Father (English):</label>
+        <input type="text" id="email" name="Fatherenglish">
+      </div><br>
+  
+      <div>
+        <label for="email">Mother (Hindi):</label>
+        <input type="text" id="email" name="Motherhindi">
+      </div><br>
+  
+      <div>
+        <label for="email">Mother (English):</label>
+        <input type="text" id="email" name="Motherenglish">
+      </div><br>
+  
+      <div>
+        <label for="email">Husband (Hindi):</label>
+        <input type="text" id="email" name="Husbandhindi">
+      </div><br>
+  
+      <div>
+        <label for="email">Husband (English):</label>
+        <input type="text" id="email" name="Husbandenglish">
+      </div><br>
+  
+      <div>
+        <label for="email">Wife (Hindi):</label>
+        <input type="text" id="email" name="Wifehindi">
+      </div><br>
+  
+      <div>
+        <label for="email">Wife (English):</label>
+        <input type="text" id="email" name="Wifeenglish">
+      </div><br>
+  
+      <div>
+        <label for="email">Central Job:</label>
+        <input type="text" id="email" name="Centraljob">
+      </div><br>
+  
+      <div>
+        <label for="email">Salary:</label>
+        <input type="text" id="email" name="Sallery">
+      </div><br>
+  
+      <div>
+        <label for="email">First Job Date:</label>
+        <input type="text" id="email" name="Firstjobdate">
+      </div><br>
+  
+      <div>
+        <label for="email">Community:</label>
+        <input type="text" id="email" name="Community">
+      </div><br>
+  
+      <div>
+        <label for="email">Vacancy:</label>
+        <input type="text" id="email" name="sVacancy">
+      </div><br>
+  
+      <div>
+        <label for="email">Salary (Second):</label>
+        <input type="text" id="email" name="sSallery">
+      </div><br>
+  
+      <div>
+        <label for="email">Job From Date:</label>
+        <input type="text" id="email" name="JobFromdate">
+      </div><br>
+  
+      <div>
+        <label for="email">Job To Date:</label>
+        <input type="text" id="email" name="JobTodate">
+      </div><br>
+  
+      <div>
+        <label for="email">Farming Land:</label>
+        <input type="text" id="email" name="FarmingLand">
+      </div><br>
+  
+      <div>
+        <label for="email">Flat:</label>
+        <input type="text" id="email" name="Flat">
+      </div><br>
+  
+      <div>
+        <label for="email">In Flat:</label>
+        <input type="text" id="email" name="inFlat">
+      </div><br>
+  
+      <div>
+        <label for="email">Out Flat:</label>
+        <input type="text" id="email" name="outFlat">
+      </div><br>
+  
+      <div>
+        <label for="email">Applicant (Translation):</label>
+        <input type="text" id="email" name="tApplicant">
+      </div><br>
+  
+      <div>
+        <label for="email">Father (Translation):</label>
+        <input type="text" id="email" name="tFather">
+      </div><br>
+  
+      <div>
+        <label for="email">Address (Translation):</label>
+        <input type="text" id="email" name="tAddress">
+      </div><br>
+  
+      <div>
+        <label for="email">Cast (Translation):</label>
+        <input type="text" id="email" name="tCast">
+      </div><br>
+  
+      <div>
+        <label for="email">Sub-Cast (Translation):</label>
+        <input type="text" id="email" name="tSubcast">
+      </div><br>
+  
+      <div>
+        <label for="email">Landscape (Translation):</label>
+        <input type="text" id="email" name="tlandscape">
+      </div><br>
+  
+      <div>
+        <label for="email">Flat (Translation):</label>
+        <input type="text" id="email" name="tFlat">
+      </div><br>
+  
+      <div>
+        <label for="email">Ration Card (Translation):</label>
+        <input type="text" id="email" name="tRashancard">
+      </div><br>
+  
+      <div>
+        <label for="email">Date (Translation):</label>
+        <input type="text" id="email" name="tDate">
+      </div><br>
+  
+      <div>
+        <label for="email">Halkano (Translation):</label>
+        <input type="text" id="email" name="tHalkano">
+      </div><br>
+  
+      <div>
+        <label for="email">Promiser:</label>
+        <input type="text" id="email" name="fPromiser">
+      </div><br>
+  
+      <div>
+        <label for="email">Father:</label>
+        <input type="text" id="email" name="fFather">
+      </div><br>
+  
+      <div>
+        <label for="email">Cast:</label>
+        <input type="text" id="email" name="fCast">
+      </div><br>
+  
+      <div>
+        <label for="email">State:</label>
+        <input type="text" id="email" name="fState">
+      </div><br>
+  
+      <div>
+        <label for="email">Address:</label>
+        <input type="text" id="email" name="fAddress">
+      </div><br>
+  
+      <div>
+        <label for="email">Full Address:</label>
+        <input type="text" id="email" name="fFullAddress">
+      </div><br>
+  
+      <div>
+        <label for="email">Tehsil:</label>
+        <input type="text" id="email" name="fTehsil">
+      </div><br>
+  
+      <div>
+        <label for="email">District:</label>
+        <input type="text" id="email" name="fDistrict">
+      </div><br>
+  
+      <div>
+        <label for="email">Income:</label>
+        <input type="text" id="email" name="fIncome">
+      </div><br>
+  
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  
+</body>
+
+</html>

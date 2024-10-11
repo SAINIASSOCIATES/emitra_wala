@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    .section {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .elements {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 24%; /* Adjusted for 4 items per row */
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 15%;
+      height: 15%;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section">
+    <form action="/forms/EPFO15GForm" method="POST">
+        <div class="elements">
+            <label for="nameassessee">आस्सेसी का नाम:</label>
+            <input type="text" id="nameassessee" name="nameassessee"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="panassessee">आस्सेसी का पैन:</label>
+            <input type="text" id="panassessee" name="panassessee"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="status">स्थिति:</label>
+            <input type="text" id="status" name="status"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="previousyear">पिछला वर्ष:</label>
+            <input type="text" id="previousyear" name="previousyear"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="residentialstatus">निवासीय स्थिति:</label>
+            <input type="text" id="residentialstatus" name="residentialstatus"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="flat">फ्लैट/दरवाजा/ब्लॉक संख्या:</label>
+            <input type="text" id="flat" name="flat"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="premises">परिसर का नाम:</label>
+            <input type="text" id="premises" name="premises"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="road">सड़क/गली/लेन:</label>
+            <input type="text" id="road" name="road"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="area">क्षेत्र/स्थानीयता:</label>
+            <input type="text" id="area" name="area"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="district">जिला:</label>
+            <input type="text" id="district" name="district"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="state">राज्य:</label>
+            <input type="text" id="state" name="state"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="pin">पिन:</label>
+            <input type="text" id="pin" name="pin"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="email">ईमेल:</label>
+            <input type="text" id="email" name="email"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="mobileno">मोबाइल नंबर:</label>
+            <input type="text" id="mobileno" name="mobileno"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="yes">हाँ:</label>
+            <input type="text" id="yes" name="yes"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="no">नहीं:</label>
+            <input type="text" id="no" name="no"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="estimated">जिस आय का अनुमानित है:</label>
+            <input type="text" id="estimated" name="estimated"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="formfield">पिछले वर्ष के दौरान इस फॉर्म के अलावा अन्य फॉर्म नं. 15G के विवरण:</label>
+            <input type="text" id="formfield" name="formfield"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="totalform">कुल संख्या फॉर्म 15G दाखिल किए गए:</label>
+            <input type="text" id="totalform" name="totalform"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="account">खाता:</label>
+            <input type="text" id="account" name="account"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="incometye">आय प्रकार:</label>
+            <input type="text" id="incometye" name="incometye"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="tax">कर:</label>
+            <input type="text" id="tax" name="tax"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="amount">राशि:</label>
+            <input type="text" id="amount" name="amount"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="signature">हस्ताक्षर:</label>
+            <input type="text" id="signature" name="signature"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="verification">सत्यापन:</label>
+            <input type="text" id="verification" name="verification"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="yearending">वर्ष समाप्ति:</label>
+            <input type="text" id="yearending" name="yearending"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="year">वर्ष:</label>
+            <input type="text" id="year" name="year"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="yearendingon">वर्ष समाप्ति पर:</label>
+            <input type="text" id="yearendingon" name="yearendingon"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="year2">वर्ष 2:</label>
+            <input type="text" id="year2" name="year2"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="place">स्थान:</label>
+            <input type="text" id="place" name="place"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="date">तारीख:</label>
+            <input type="text" id="date" name="date"><br><br>
+        </div>
+
+        <div class="elements">
+            <label for="signature2">हस्ताक्षर 2:</label>
+            <input type="text" id="signature2" name="signature2"><br><br>
+        </div>
+
+        <button type="submit">जमा करें</button>
+    </form>
+</div>
+
+
+
+
+  <script>
+    let hindiState = document.getElementById("mstate");
+    let hindiDistrict = document.getElementById("mdistrict");
+    let femaleState = document.getElementById("festate");
+    let femaleDistrict = document.getElementById("fdistrict");
+    let panditState = document.getElementById("pstate");
+    let panditDistrict = document.getElementById("pdistrict");
+    let menDistrict = document.getElementById("emdistrict");
+    let menState = document.getElementById("mestate");
+    let womenState = document.getElementById("fstate");
+    let womenDistrict = document.getElementById("efdistrict");
+    let weddingStateHindi = document.getElementById("marrstate");
+    let weddingDistrictHindi = document.getElementById("marrdistrict");
+    let weddingStateEnglish = document.getElementById("emarrstate");
+    let weddingDistrictEnglish = document.getElementById("emarrdistrict");
+    let listData;
+    let englishListData;
+
+    fetch("states-and-districts.json")
+      .then((res) => res.json())
+      .then((data) => {
+        englishListData = data.states;
+        data.states.forEach((state) => {
+          // Create new options for each dropdown
+          let menOption = document.createElement("option");
+          menOption.value = state.state;
+          menOption.innerHTML = state.state;
+          menState.appendChild(menOption);
+
+          let womenOption = document.createElement("option");
+          womenOption.value = state.state;
+          womenOption.innerHTML = state.state;
+          womenState.appendChild(womenOption);
+
+          let weddingOptionEnglish = document.createElement("option");
+          weddingOptionEnglish.value = state.state;
+          weddingOptionEnglish.innerHTML = state.state;
+          weddingStateEnglish.appendChild(weddingOptionEnglish);
+        });
+      });
+
+    fetch("state_in_Hindi.json")
+      .then((res) => res.json())
+      .then((data) => {
+        listData = data.states;
+        data.states.forEach((state) => {
+          // Create new options for each dropdown
+          let hindiOption = document.createElement("option");
+          hindiOption.value = state.state;
+          hindiOption.innerHTML = state.state;
+          hindiState.appendChild(hindiOption);
+
+          let femaleOption = document.createElement("option");
+          femaleOption.value = state.state;
+          femaleOption.innerHTML = state.state;
+          femaleState.appendChild(femaleOption);
+
+          let panditOption = document.createElement("option");
+          panditOption.value = state.state;
+          panditOption.innerHTML = state.state;
+          panditState.appendChild(panditOption);
+
+          let weddingOptionHindi = document.createElement("option");
+          weddingOptionHindi.value = state.state;
+          weddingOptionHindi.innerHTML = state.state;
+          weddingStateHindi.appendChild(weddingOptionHindi);
+        });
+      });
+
+    // Event listeners for Hindi dropdowns
+    hindiState.addEventListener("change", function (e) {
+      updateDistricts(hindiState, hindiDistrict, listData, "-- जिले का चयन करें --");
+    });
+
+    femaleState.addEventListener("change", function (e) {
+      updateDistricts(femaleState, femaleDistrict, listData, "-- जिले का चयन करें --");
+    });
+
+    panditState.addEventListener("change", function (e) {
+      updateDistricts(panditState, panditDistrict, listData, "-- जिले का चयन करें --");
+    });
+
+    weddingStateHindi.addEventListener("change", function (e) {
+      updateDistricts(weddingStateHindi, weddingDistrictHindi, listData, "-- जिले का चयन करें --");
+    });
+
+    // Event listeners for English dropdowns
+    menState.addEventListener("change", function (e) {
+      updateDistricts(menState, menDistrict, englishListData, "-- Select District --");
+    });
+
+    womenState.addEventListener("change", function (e) {
+      updateDistricts(womenState, womenDistrict, englishListData, "-- Select District --");
+    });
+
+    weddingStateEnglish.addEventListener("change", function (e) {
+      updateDistricts(weddingStateEnglish, weddingDistrictEnglish, englishListData, "-- Select District --");
+    });
+
+    // Helper function to update districts
+    function updateDistricts(stateElement, districtElement, listData, defaultOptionText) {
+      listData.find((ele) => {
+        if (ele.state === stateElement.value) {
+          districtElement.innerHTML = `<option value="">${defaultOptionText}</option>`;
+          ele.districts.forEach((district) => {
+            let option = document.createElement("option");
+            option.value = district;
+            option.innerHTML = district;
+            districtElement.appendChild(option);
+          });
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>

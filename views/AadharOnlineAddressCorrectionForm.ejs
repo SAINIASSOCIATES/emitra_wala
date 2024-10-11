@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .form-group div {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .form-group div:last-child {
+      margin-right: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      .form-group {
+        flex-direction: column;
+      }
+
+      .form-group div {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="/AadharOnlineAddressCorrectionForm" method="POST">
+      <div class="form-group">
+          <div>
+              <label for="doi">जारी करने की तारीख:</label>
+              <input type="text" id="doi" name="doi" value="" required>
+          </div>
+          <div>
+              <label for="adharnum">आधार नंबर:</label>
+              <input type="text" id="adharnum" name="adharnum" value="" required>
+          </div>
+          <div>
+              <label for="name">नाम:</label>
+              <input type="text" id="name" name="name" value="" required>
+          </div>
+          <div>
+              <label for="careof">C/O:</label>
+              <input type="text" id="careof" name="careof" value="" required>
+          </div>
+      </div>
+  
+      <div class="form-group">
+          <div>
+              <label for="huseno">घर नंबर:</label>
+              <input type="text" id="huseno" name="huseno" value="" required>
+          </div>
+          <div>
+              <label for="street">सड़क का नाम:</label>
+              <input type="text" id="street" name="street" value="" required>
+          </div>
+          <div>
+              <label for="lndmark">पता पहचान:</label>
+              <input type="text" id="lndmark" name="lndmark" value="" required>
+          </div>
+          <div>
+              <label for="arealoc">क्षेत्र/स्थानीयता/सेक्टर:</label>
+              <input type="text" id="arealoc" name="arealoc" value="" required>
+          </div>
+      </div>
+  
+      <div class="form-group">
+          <div>
+              <label for="village">गाँव/शहर:</label>
+              <input type="text" id="village" name="village" value="" required>
+          </div>
+          <div>
+              <label for="postofc">डाकघर:</label>
+              <input type="text" id="postofc" name="postofc" value="" required>
+          </div>
+          <div>
+              <label for="district">जिला:</label>
+              <input type="text" id="district" name="district" value="" required>
+          </div>
+          <div>
+              <label for="state">राज्य:</label>
+              <input type="text" id="state" name="state" value="" required>
+          </div>
+      </div>
+  
+      <div class="form-group">
+          <div>
+              <label for="pincode">पिनकोड:</label>
+              <input type="text" id="pincode" name="pincode" value="" required>
+          </div>
+          <div>
+              <label for="dob">जन्म तिथि:</label>
+              <input type="text" id="dob" name="dob" value="" required>
+          </div>
+          <div>
+              <label for="certifi">प्रमाणित करने वाला:</label>
+              <input type="text" id="certifi" name="certifi" value="" required>
+          </div>
+          <div>
+              <label for="design">पद:</label>
+              <input type="text" id="design" name="design" value="" required>
+          </div>
+      </div>
+  
+      <div class="form-group">
+          <div>
+              <label for="offadd">कार्यालय का पता:</label>
+              <input type="text" id="offadd" name="offadd" value="" required>
+          </div>
+          <div>
+              <label for="contact">संपर्क:</label>
+              <input type="text" id="contact" name="contact" value="" required>
+          </div>
+      </div>
+  
+      <div>
+          <button type="submit">सबमिट करें</button>
+      </div>
+  </form>
+  
+  </div>
+</body>
+</html>

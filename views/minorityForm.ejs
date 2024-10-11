@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill PDF Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 3rem;
+    }
+
+    .section-info {
+      display: flex;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #fff;
+
+    }
+
+    .section-info div {
+      margin-right: 10px;
+      padding: 0.7rem;
+    }
+
+    .section-info div label {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .section-info div input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    .section-info div select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .section-info div input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    button {
+      padding: 0.7rem;
+      border-radius: 0.4rem;
+      color: #fff;
+      background-color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .section-info {
+        width: 100%;
+      }
+    }
+
+    .other-information {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 70%;
+
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .info {
+      margin-right: 3rem;
+
+    }
+
+    .indo div {
+      margin-right: 10px;
+      margin-top: 1rem;
+      padding: 0.8rem;
+    }
+
+    .info div label {
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .info div input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+
+    .info div select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .info div input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/minorityForm" method="POST">
+
+
+    <label for="email">Aadhar:</label>
+    <input type="text" id="email" name="Aadhar"  ><br><br>
+    <label for="email">Bhamashah:</label>
+    <input type="text" id="email" name="Bhamashah"  ><br><br>
+    <label for="email">ApplicantName:</label>
+    <input type="text" id="email" name="ApplicantName"  ><br><br>
+    <label for="email">ApplicantFather:</label>
+    <input type="text" id="email" name="ApplicantFather"  ><br><br>
+    <label for="email">PresentAddress:</label>
+    <input type="text" id="email" name="PresentAddress"  ><br><br>
+    <label for="email">FixAddress:</label>
+    <input type="text" id="email" name="FixAddress"  ><br><br>
+    <label for="email">Villagect:</label>
+    <input type="text" id="email" name="Villagect"  ><br><br>
+    <label for="email">Tehsil:</label>
+    <input type="text" id="email" name="Tehsil"  ><br><br>
+    <label for="email">District:</label>
+    <input type="text" id="email" name="District"  ><br><br>
+    <label for="email">Dob:</label>
+    <input type="text" id="email" name="Dob"  ><br><br>
+    <label for="email">DobAddress:</label>
+    <input type="text" id="email" name="DobAddress"  ><br><br>
+    <label for="email">Age:</label>
+    <input type="text" id="email" name="Age"  ><br><br>
+    <label for="email">GenderM:</label>
+    <input type="text" id="email" name="GenderM"  ><br><br>
+    <label for="email">GenderF:</label>
+    <input type="text" id="email" name="GenderF"  ><br><br>
+    <label for="email">Marriage:</label>
+    <input type="text" id="email" name="Marriage"  ><br><br>
+    <label for="email">UnMarriage:</label>
+    <input type="text" id="email" name="UnMarriage"  ><br><br>
+    <label for="email">ApplicantVerg:</label>
+    <input type="text" id="email" name="ApplicantVerg"  ><br><br>
+    <label for="email">ApplicantFatherVerg:</label>
+    <input type="text" id="email" name="ApplicantFatherVerg"  ><br><br>
+    <label for="email">ApplicantReliges:</label>
+    <input type="text" id="email" name="ApplicantReliges"  ><br><br>
+    <label for="email">Applicantyes:</label>
+    <input type="text" id="email" name="Applicantyes"  ><br><br>
+    <label for="email">Applicantno:</label>
+    <input type="text" id="email" name="Applicantno"  ><br><br>
+    <label for="email">ApplicantMobile:</label>
+    <input type="text" id="email" name="ApplicantMobile"  ><br><br>
+    <label for="email">Date:</label>
+    <input type="text" id="email" name="Date"  ><br><br>
+    <label for="email">Address:</label>
+    <input type="text" id="email" name="Address"  ><br><br>
+    <label for="email">ApplicantCheck:</label>
+    <input type="text" id="email" name="ApplicantCheck"  ><br><br>
+    <label for="email">ApplicantCheckFather:</label>
+    <input type="text" id="email" name="ApplicantCheckFather"  ><br><br>
+    <label for="email">ApplicantCheckAddress:</label>
+    <input type="text" id="email" name="ApplicantCheckAddress"  ><br><br>
+    <label for="email">Community:</label>
+    <input type="text" id="email" name="Community"  ><br><br>
+    <label for="email">IdNumber:</label>
+    <input type="text" id="email" name="IdNumber"  ><br><br>
+    <label for="email">ApplicantCheckDate:</label>
+    <input type="text" id="email" name="ApplicantCheckDate"  ><br><br>
+    <label for="email">HalkaNo:</label>
+    <input type="text" id="email" name="HalkaNo"  ><br><br>
+    <label for="email">Avidancefirst:</label>
+    <input type="text" id="email" name="Avidancefirst"  ><br><br>
+    <label for="email">AvidancefirstFather:</label>
+    <input type="text" id="email" name="AvidancefirstFather"  ><br><br>
+    <label for="email">AvidancefirstAddress:</label>
+    <input type="text" id="email" name="AvidancefirstAddress"  ><br><br>
+    <label for="email">FirstVibhag:</label>
+    <input type="text" id="email" name="FirstVibhag"  ><br><br>
+    <label for="email">FirstRikti:</label>
+    <input type="text" id="email" name="FirstRikti"  ><br><br>
+    <label for="email">FirstAvApplicant:</label>
+    <input type="text" id="email" name="FirstAvApplicant"  ><br><br>
+    <label for="email">FirstAvApplicanFather:</label>
+    <input type="text" id="email" name="FirstAvApplicanFather"  ><br><br>
+    <label for="email">FirstAvApplicantAddress:</label>
+    <input type="text" id="email" name="FirstAvApplicantAddress"  ><br><br>
+    <label for="email">FirstLastyears:</label>
+    <input type="text" id="email" name="FirstLastyears"  ><br><br>
+    <label for="email">FirstCommunity:</label>
+    <input type="text" id="email" name="FirstCommunity"  ><br><br>
+    <label for="email">SecondAvidance:</label>
+    <input type="text" id="email" name="SecondAvidance"  ><br><br>
+    <label for="email">SecondAvidanceFather:</label>
+    <input type="text" id="email" name="SecondAvidanceFather"  ><br><br>
+    <label for="email">SecondAvidanceAddress:</label>
+    <input type="text" id="email" name="SecondAvidanceAddress"  ><br><br>
+    <label for="email">SecondVibhag:</label>
+    <input type="text" id="email" name="SecondVibhag"  ><br><br>
+    <label for="email">SecondRikti:</label>
+    <input type="text" id="email" name="SecondRikti"  ><br><br>
+    <label for="email">SecondAvApplicant:</label>
+    <input type="text" id="email" name="SecondAvApplicant"  ><br><br>
+    <label for="email">SecondAvApplicantFather:</label>
+    <input type="text" id="email" name="SecondAvApplicantFather"  ><br><br>
+    <label for="email">SecondAvApplicantAddress:</label>
+    <input type="text" id="email" name="SecondAvApplicantAddress"  ><br><br>
+    <label for="email">SecondLastyears:</label>
+    <input type="text" id="email" name="SecondLastyears"  ><br><br>
+    <label for="email">SecondCommunity:</label>
+    <input type="text" id="email" name="SecondCommunity"  ><br><br>
+
+
+
+    <label for="email">Promiser:</label>
+    <input type="text" id="email" name="Promiser"  ><br><br>
+    <label for="email">PromiserFather:</label>
+    <input type="text" id="email" name="PromiserFather"  ><br><br>
+    <label for="email">PromiserAddress:</label>
+    <input type="text" id="email" name="PromiserAddress"  ><br><br>
+    <label for="email">PromiserVillagect:</label>
+    <input type="text" id="email" name="PromiserVillagect"  ><br><br>
+    <label for="email">PromiserTehsil:</label>
+    <input type="text" id="email" name="PromiserTehsil"  ><br><br>
+    <label for="email">PromiserDistrict:</label>
+    <input type="text" id="email" name="PromiserDistrict"  ><br><br>
+    <label for="email">PromiserCommunity:</label>
+    <input type="text" id="email" name="PromiserCommunity"  ><br><br>
+    <label for="email">PromiserCommunitysecond:</label>
+    <input type="text" id="email" name="PromiserCommunitysecond"  ><br><br>
+    <label for="email">PromiserCommunityDob:</label>
+    <input type="text" id="email" name="PromiserCommunityDob"  ><br><br>
+    <label for="email">PromiserCommunityAddress:</label>
+    <input type="text" id="email" name="PromiserCommunityAddress"  ><br><br>
+    <label for="email">PromiserAlpCommunity:</label>
+    <input type="text" id="email" name="PromiserAlpCommunity"  ><br><br>
+    <label for="email">PromiserInCommunities:</label>
+    <input type="text" id="email" name="PromiserInCommunities"  ><br><br>
+    <label for="email">PromiserSdistrict:</label>
+    <input type="text" id="email" name="PromiserSdistrict"  ><br><br>
+    <label for="email">PromiserChild:</label>
+    <input type="text" id="email" name="PromiserChild"  ><br><br>
+    <label for="email">Promiseraplcertificate:</label>
+    <input type="text" id="email" name="Promiseraplcertificate"  ><br><br>
+    <label for="email">PromiserSatyapn:</label>
+    <input type="text" id="email" name="PromiserSatyapn"  ><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+
+
+</body>
+
+</html>
